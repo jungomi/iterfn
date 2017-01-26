@@ -40,6 +40,7 @@
     "new-cap": "warn",
     "no-array-constructor": "error",
     "no-confusing-arrow": "error",
+    "no-constant-condition": ["error", { "checkLoops": false }],
     "no-else-return": "error",
     "no-eval": "error",
     "no-extend-native": "error",
