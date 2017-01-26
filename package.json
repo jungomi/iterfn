@@ -1,0 +1,31 @@
+{
+  "name": "iterator-adapters",
+  "version": "0.1.0",
+  "description": "Functions which take an iterator and return another iterator",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "jsnext:main": "src/index.js",
+  "repository": {},
+  "author": "Michael Jungo <michaeljungo92@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "lint": "eslint .",
+    "test": "ava --verbose",
+    "clean": "rimraf lib"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-env": "^1.1.8",
+    "eslint": "^3.14.1",
+    "rimraf": "^2.5.4"
+  }
+}
