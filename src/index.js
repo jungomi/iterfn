@@ -33,7 +33,7 @@ export function extendIterator(iter) {
       return extendIterator(filterMap(this, func));
     },
     map(mapFunc) {
-      return extendIterator(extendIterator(map(this, mapFunc)));
+      return extendIterator(map(this, mapFunc));
     },
     skip(n) {
       return extendIterator(skip(this, n));
