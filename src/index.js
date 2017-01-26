@@ -2,6 +2,10 @@ import chain from './chain';
 import filter from './filter';
 import filterMap from './filterMap';
 import map from './map';
+import skip from './skip';
+import skipWhile from './skipWhile';
+import take from './take';
+import takeWhile from './takeWhile';
 import zip from './zip';
 
 import { isGeneratorFunction, isIterable } from './utils';
@@ -30,6 +34,18 @@ export function extendIterator(iter) {
     },
     map(mapFunc) {
       return extendIterator(extendIterator(map(this, mapFunc)));
+    },
+    skip(n) {
+      return extendIterator(skip(this, n));
+    },
+    skipWhile(predicate) {
+      return extendIterator(skipWhile(this, predicate));
+    },
+    take(n) {
+      return extendIterator(take(this, n));
+    },
+    takeWhile(predicate) {
+      return extendIterator(takeWhile(this, predicate));
     },
     zip(otherIter) {
       return extendIterator(zip(this, otherIter));
