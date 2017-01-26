@@ -29,3 +29,15 @@ test('iter throws when not passing an iterator', t => {
   t.throws(() => iter(num), TypeError);
   t.throws(() => iter(func), TypeError);
 });
+
+test('iterators can be chained', t => {
+  const chainedIter = iter([1, 2])
+    .map(x => x * 3)
+    .chain([9, 10])
+    .filter(x => x % 2 === 0);
+
+  t.is(typeof chainedIter.next, 'function');
+  t.is(chainedIter.next().value, 6);
+  t.is(chainedIter.next().value, 10);
+  t.true(chainedIter.next().done);
+});
