@@ -18,6 +18,9 @@ export function extendIterator(iter) {
     chain(...iterables) {
       return extendIterator(adapters.chain(this, ...iterables));
     },
+    cycle() {
+      return extendIterator(adapters.cycle(this));
+    },
     enumerate() {
       return extendIterator(adapters.enumerate(this));
     },
@@ -38,6 +41,9 @@ export function extendIterator(iter) {
     },
     map(mapFunc) {
       return extendIterator(adapters.map(this, mapFunc));
+    },
+    reverse() {
+      return extendIterator(adapters.reverse(this));
     },
     scan(initialValue, func) {
       return extendIterator(adapters.scan(this, initialValue, func));
