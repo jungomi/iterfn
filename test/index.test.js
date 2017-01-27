@@ -41,3 +41,13 @@ test('iterators can be chained', t => {
   t.is(chainedIter.next().value, 10);
   t.true(chainedIter.next().done);
 });
+
+test('iterators end when calling a consumer', t => {
+  const result = iter([1, 2])
+    .map(x => x * 3)
+    .chain([9, 10])
+    .filter(x => x % 2 === 0)
+    .collect();
+
+  t.deepEqual(result, [6, 10]);
+});

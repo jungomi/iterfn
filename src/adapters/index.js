@@ -6,6 +6,7 @@ import flatMap from './flatMap';
 import fuse from './fuse';
 import inspect from './inspect';
 import map from './map';
+import scan from './scan';
 import skip from './skip';
 import skipWhile from './skipWhile';
 import take from './take';
@@ -21,6 +22,7 @@ export {
   fuse,
   inspect,
   map,
+  scan,
   skip,
   skipWhile,
   take,

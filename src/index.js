@@ -1,4 +1,5 @@
 import * as adapters from './adapters';
+import * as consumers from './consumers';
 import { isGeneratorFunction, isIterable } from './utils';
 
 function iter(iterable) {
@@ -38,6 +39,9 @@ export function extendIterator(iter) {
     map(mapFunc) {
       return extendIterator(adapters.map(this, mapFunc));
     },
+    scan(initialValue, func) {
+      return extendIterator(adapters.scan(this, initialValue, func));
+    },
     skip(n) {
       return extendIterator(adapters.skip(this, n));
     },
@@ -52,6 +56,15 @@ export function extendIterator(iter) {
     },
     zip(otherIter) {
       return extendIterator(adapters.zip(this, otherIter));
+    },
+    collect(fromIter) {
+      return consumers.collect(this, fromIter);
+    },
+    fold(initialValue, func) {
+      return consumers.fold(this, initialValue, func);
+    },
+    reduce(func) {
+      return consumers.reduce(this, func);
     }
   });
 }
