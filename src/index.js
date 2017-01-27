@@ -57,11 +57,20 @@ export function extendIterator(iter) {
     zip(otherIter) {
       return extendIterator(adapters.zip(this, otherIter));
     },
+    all(predicate) {
+      return consumers.all(this, predicate);
+    },
+    any(predicate) {
+      return consumers.any(this, predicate);
+    },
     collect(fromIter) {
       return consumers.collect(this, fromIter);
     },
     count() {
       return consumers.count(this);
+    },
+    find(predicate) {
+      return consumers.find(this, predicate);
     },
     fold(initialValue, func) {
       return consumers.fold(this, initialValue, func);
@@ -71,6 +80,12 @@ export function extendIterator(iter) {
     },
     nth(n) {
       return consumers.nth(this, n);
+    },
+    partition(predicate) {
+      return consumers.partition(this, predicate);
+    },
+    position(predicate) {
+      return consumers.position(this, predicate);
     },
     product() {
       return consumers.product(this);
