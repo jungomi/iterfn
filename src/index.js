@@ -78,6 +78,12 @@ export function extendIterator(iter) {
     last() {
       return consumers.last(this);
     },
+    max() {
+      return consumers.max(this);
+    },
+    min() {
+      return consumers.min(this);
+    },
     nth(n) {
       return consumers.nth(this, n);
     },
@@ -95,6 +101,9 @@ export function extendIterator(iter) {
     },
     sum() {
       return consumers.sum(this);
+    },
+    unzip() {
+      return consumers.unzip(this);
     }
   });
 }
