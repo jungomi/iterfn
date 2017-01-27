@@ -60,11 +60,26 @@ export function extendIterator(iter) {
     collect(fromIter) {
       return consumers.collect(this, fromIter);
     },
+    count() {
+      return consumers.count(this);
+    },
     fold(initialValue, func) {
       return consumers.fold(this, initialValue, func);
     },
+    last() {
+      return consumers.last(this);
+    },
+    nth(n) {
+      return consumers.nth(this, n);
+    },
+    product() {
+      return consumers.product(this);
+    },
     reduce(func) {
       return consumers.reduce(this, func);
+    },
+    sum() {
+      return consumers.sum(this);
     }
   });
 }
