@@ -1,6 +1,10 @@
 import chain from './chain';
+import enumerate from './enumerate';
 import filter from './filter';
 import filterMap from './filterMap';
+import flatMap from './flatMap';
+import fuse from './fuse';
+import inspect from './inspect';
 import map from './map';
 import skip from './skip';
 import skipWhile from './skipWhile';
@@ -26,11 +30,23 @@ export function extendIterator(iter) {
     chain(...iterables) {
       return extendIterator(chain(this, ...iterables));
     },
+    enumerate() {
+      return extendIterator(enumerate(this));
+    },
     filter(filterFunc) {
       return extendIterator(filter(this, filterFunc));
     },
     filterMap(func) {
       return extendIterator(filterMap(this, func));
+    },
+    flatMap(mapFunc) {
+      return extendIterator(flatMap(this, mapFunc));
+    },
+    fuse() {
+      return extendIterator(fuse(this));
+    },
+    inspect(func) {
+      return extendIterator(inspect(this, func));
     },
     map(mapFunc) {
       return extendIterator(map(this, mapFunc));
