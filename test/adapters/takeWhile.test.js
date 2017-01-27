@@ -1,5 +1,5 @@
 import test from 'ava';
-import takeWhile from '../src/takeWhile';
+import takeWhile from '../../src/adapters/takeWhile';
 
 test('takeWhile stops when the predicate returns false', t => {
   const iter = takeWhile([1, 2, 3, 4], x => x < 3);

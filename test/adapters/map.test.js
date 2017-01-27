@@ -1,5 +1,5 @@
 import test from 'ava';
-import map from '../src/map';
+import map from '../../src/adapters/map';
 
 test('map returns a new iterator with the function applied', t => {
   const mapIter = map([1, 5], x => x * 2);

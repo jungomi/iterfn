@@ -1,5 +1,5 @@
 import test from 'ava';
-import inspect from '../src/inspect';
+import inspect from '../../src/adapters/inspect';
 
 test('inspect executes the function and returns the original values', t => {
   const expected = [1, 2, 3];

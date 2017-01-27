@@ -1,5 +1,5 @@
 import test from 'ava';
-import zip from '../src/zip';
+import zip from '../../src/adapters/zip';
 
 test('zip combines two iterators into a single one with pairs', t => {
   function* gen() {

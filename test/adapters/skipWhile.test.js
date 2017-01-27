@@ -1,5 +1,5 @@
 import test from 'ava';
-import skipWhile from '../src/skipWhile';
+import skipWhile from '../../src/adapters/skipWhile';
 
 test('skipWhile yields values after the predicate returns false', t => {
   const iter = skipWhile([1, 2, 3, 4], x => x < 3);

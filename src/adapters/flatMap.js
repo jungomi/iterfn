@@ -1,4 +1,4 @@
-import { isIterable } from './utils';
+import { isIterable } from './../utils';
 
 function* flatMap(iterable, mapFunc) {
   for (const val of iterable) {

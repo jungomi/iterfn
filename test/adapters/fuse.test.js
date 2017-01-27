@@ -1,5 +1,5 @@
 import test from 'ava';
-import fuse from '../src/fuse';
+import fuse from '../../src/adapters/fuse';
 
 test('fuse stops when null or undefined is encountered', t => {
   const iterNull = fuse([1, null, 2]);

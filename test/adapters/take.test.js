@@ -1,5 +1,5 @@
 import test from 'ava';
-import take from '../src/take';
+import take from '../../src/adapters/take';
 
 test('take returns the correct number of values', t => {
   const iter = take([1, 2, 3, 4], 2);

@@ -1,5 +1,5 @@
 import test from 'ava';
-import filter from '../src/filter';
+import filter from '../../src/adapters/filter';
 
 test('filter returns a new iterator with the filtered values', t => {
   const filterIter = filter([1, 2, 3, 4, 5], x => x % 2 === 0);

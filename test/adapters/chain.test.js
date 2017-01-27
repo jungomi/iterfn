@@ -1,5 +1,5 @@
 import test from 'ava';
-import chain from '../src/chain';
+import chain from '../../src/adapters/chain';
 
 test('chain combines iterators correctly', t => {
   function* gen() {

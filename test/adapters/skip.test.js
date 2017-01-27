@@ -1,5 +1,5 @@
 import test from 'ava';
-import skip from '../src/skip';
+import skip from '../../src/adapters/skip';
 
 test('skip starts after the nth value', t => {
   const iter = skip([1, 2, 3, 4], 2);

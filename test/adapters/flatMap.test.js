@@ -1,5 +1,5 @@
 import test from 'ava';
-import flatMap from '../src/flatMap';
+import flatMap from '../../src/adapters/flatMap';
 
 test('flatMap iterates over nested iterators', t => {
   const iter = flatMap([[1, [2, 3]], 4], x => x * 2);

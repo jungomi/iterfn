@@ -1,5 +1,5 @@
 import test from 'ava';
-import filterMap from '../src/filterMap';
+import filterMap from '../../src/adapters/filterMap';
 
 test('filterMap returns mapped and filtered values', t => {
   const func = x => {

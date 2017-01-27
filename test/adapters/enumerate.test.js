@@ -1,5 +1,5 @@
 import test from 'ava';
-import enumerate from '../src/enumerate';
+import enumerate from '../../src/adapters/enumerate';
 
 test('enumerate returns the values and their index', t => {
   const iter = enumerate(['a', 'b', 'c']);
