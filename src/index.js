@@ -2,6 +2,19 @@ import * as adapters from './adapters';
 import * as consumers from './consumers';
 import { isGeneratorFunction, isIterable } from './utils';
 
+/**
+ * Turns an iterable object or a generator function into an iterator and adds
+ * methods to easily operate on the values. These methods can be chained until
+ * a consumer is called.
+ *
+ * @param {Iterable|Generator} iterable An iterable object or generator function
+ * that can be turned into an iterator.
+ *
+ * @throws {TypeError} Throws when the input cannot be converted to an iterator.
+ *
+ * @returns {Iterator} An iterator with additional methods to operate on its
+ * values.
+ */
 function iter(iterable) {
   if (isIterable(iterable)) {
     return iterFromIterable(iterable);
@@ -13,6 +26,15 @@ function iter(iterable) {
   throw new TypeError('Could not convert to iterator');
 }
 
+
+/**
+ * Adds methods that call the respective functions on the iterator which can be
+ * chained as long as the functions return another iterator.
+ *
+ * @param {Iterator} iter An iterator that gets extended.
+ *
+ * @returns {Iterator} The extended iterator.
+ */
 export function extendIterator(iter) {
   return Object.assign(iter, {
     chain(...iterables) {
@@ -114,10 +136,29 @@ export function extendIterator(iter) {
   });
 }
 
+/**
+ * Turns an iterable object into an iterator and adds methods to easily operate
+ * on the values.
+ *
+ * @param {Iterable} iterable An iterable object that can be turned into an
+ * iterator.
+ *
+ * @returns {Iterator} An iterator with additional methods to operate on its
+ * values.
+ */
 export function iterFromIterable(iterable) {
   return extendIterator(iterable[Symbol.iterator]());
 }
 
+/**
+ * Turns a generator function into an iterator and adds methods to easily
+ * operate on the values.
+ *
+ * @param {Iterable} generator A generator function that return an iterator.
+ *
+ * @returns {Iterator} An iterator with additional methods to operate on its
+ * values.
+ */
 export function iterFromGenerator(generator) {
   return extendIterator(generator());
 }
