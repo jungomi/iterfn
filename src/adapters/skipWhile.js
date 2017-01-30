@@ -10,7 +10,7 @@
  * @returns {Iterator} An iterator which yields all values after the predicate
  * became false.
  */
-function* skipWhile(iter, predicate) {
+export default function* skipWhile(iter, predicate) {
   let skipFinished = false;
   for (const val of iter) {
     if (skipFinished || !predicate(val)) {
@@ -19,5 +19,3 @@ function* skipWhile(iter, predicate) {
     }
   }
 }
-
-export default skipWhile;

@@ -5,12 +5,10 @@
  *
  * @returns {Any} The last value of the iterator.
  */
-function last(iter) {
+export default function last(iter) {
   let value;
   for (const val of iter) {
     value = val;
   }
   return value;
 }
-
-export default last;

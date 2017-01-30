@@ -10,7 +10,7 @@
  *
  * @returns {Iterator} An iterator which yields the filtered and mapped values.
  */
-function* filterMap(iter, func) {
+export default function* filterMap(iter, func) {
   for (const val of iter) {
     const result = func(val);
     if (result !== null && result !== undefined) {
@@ -18,5 +18,3 @@ function* filterMap(iter, func) {
     }
   }
 }
-
-export default filterMap;

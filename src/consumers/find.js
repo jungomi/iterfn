@@ -12,12 +12,10 @@
  * @returns {Any|undefined} The first value which satisfied the predicate or
  * undefined if no value satisfied it.
  */
-function find(iter, predicate) {
+export default function find(iter, predicate) {
   for (const val of iter) {
     if (predicate(val)) {
       return val;
     }
   }
 }
-
-export default find;

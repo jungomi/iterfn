@@ -11,7 +11,7 @@
  * @returns {Any|undefined} The nth value or undefined if n is greater than or
  * equal to the number of values in the iterator.
  */
-function nth(iter, n) {
+export default function nth(iter, n) {
   for (const val of iter) {
     if (n === 0) {
       return val;
@@ -19,5 +19,3 @@ function nth(iter, n) {
     n -= 1;
   }
 }
-
-export default nth;

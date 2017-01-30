@@ -14,12 +14,10 @@
  *
  * @returns {Iterator} An iterator which yields each step of the accumulator.
  */
-function* scan(iter, initialValue, func) {
+export default function* scan(iter, initialValue, func) {
   let acc = initialValue;
   for (const val of iter) {
     acc = func(acc, val);
     yield acc;
   }
 }
-
-export default scan;

@@ -7,7 +7,7 @@
  * @returns {[Array, Array]} An array containing two arrays where each contains
  * the values of the respective position in the pair of the iterator.
  */
-function unzip(iter) {
+export default function unzip(iter) {
   const left = [];
   const right = [];
   for (const [l, r] of iter) {
@@ -16,5 +16,3 @@ function unzip(iter) {
   }
   return [left, right];
 }
-
-export default unzip;

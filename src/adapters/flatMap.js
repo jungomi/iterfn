@@ -11,10 +11,8 @@
  * @returns {Iterator} An iterator which yields all values of the mapped
  * iterators.
  */
-function* flatMap(iterable, mapFunc) {
+export default function* flatMap(iterable, mapFunc) {
   for (const val of iterable) {
     yield* mapFunc(val);
   }
 }
-
-export default flatMap;

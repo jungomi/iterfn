@@ -10,7 +10,7 @@
  * @returns {Iterator} An iterator which yields values while the predicate is
  * true.
  */
-function* takeWhile(iter, predicate) {
+export default function* takeWhile(iter, predicate) {
   for (const val of iter) {
     if (!predicate(val)) {
       return;
@@ -18,5 +18,3 @@ function* takeWhile(iter, predicate) {
     yield val;
   }
 }
-
-export default takeWhile;

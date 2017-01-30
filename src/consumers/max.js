@@ -6,7 +6,7 @@
  *
  * @returns {Any} The maximum value of the iterator.
  */
-function max(iter) {
+export default function max(iter) {
   iter = iter[Symbol.iterator]();
   const { value: initialValue, done } = iter.next();
   if (done) {
@@ -20,5 +20,3 @@ function max(iter) {
   }
   return maxValue;
 }
-
-export default max;

@@ -10,8 +10,6 @@
  *
  * @returns {Any} A collection constructed from the values of the iterator.
  */
-function collect(iter, fromIter = Array.from) {
+export default function collect(iter, fromIter = Array.from) {
   return fromIter(iter);
 }
-
-export default collect;

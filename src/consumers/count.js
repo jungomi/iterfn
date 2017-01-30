@@ -7,7 +7,7 @@
  *
  * @returns {number} The number of iterations.
  */
-function count(iter) {
+export default function count(iter) {
   iter = iter[Symbol.iterator]();
   let i = 0;
   while (!iter.next().done) {
@@ -15,5 +15,3 @@ function count(iter) {
   }
   return i;
 }
-
-export default count;

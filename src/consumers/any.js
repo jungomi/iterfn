@@ -13,7 +13,7 @@
  *
  * @returns {boolean} Whether any value satisfies the predicate.
  */
-function any(iter, predicate) {
+export default function any(iter, predicate) {
   for (const val of iter) {
     if (predicate(val)) {
       return true;
@@ -21,5 +21,3 @@ function any(iter, predicate) {
   }
   return false;
 }
-
-export default any;

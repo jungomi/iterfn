@@ -8,7 +8,7 @@
  * @returns {Iterator} An iterator which yields every value starting after
  * the first n values.
  */
-function* skip(iter, n) {
+export default function* skip(iter, n) {
   for (const x of iter) {
     if (n > 0) {
       n -= 1;
@@ -17,5 +17,3 @@ function* skip(iter, n) {
     yield x;
   }
 }
-
-export default skip;

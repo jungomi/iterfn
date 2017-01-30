@@ -5,12 +5,10 @@
  *
  * @returns {number} The sum of all values of the iterator.
  */
-function sum(iter) {
+export default function sum(iter) {
   let result = 0;
   for (const val of iter) {
     result += val;
   }
   return result;
 }
-
-export default sum;

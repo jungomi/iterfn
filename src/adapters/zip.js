@@ -12,7 +12,7 @@
  * @returns {Iterator} An iterator which yields a pair of values from the two
  * iterators.
  */
-function* zip(iterable1, iterable2) {
+export default function* zip(iterable1, iterable2) {
   const iter1 = iterable1[Symbol.iterator]();
   const iter2 = iterable2[Symbol.iterator]();
   while (true) {
@@ -24,5 +24,3 @@ function* zip(iterable1, iterable2) {
     yield [value1, value2];
   }
 }
-
-export default zip;

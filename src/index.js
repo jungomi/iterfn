@@ -15,7 +15,7 @@ import { isGeneratorFunction, isIterable } from './utils';
  * @returns {Iterator} An iterator with additional methods to operate on its
  * values.
  */
-function iter(iterable) {
+export default function iter(iterable) {
   if (isIterable(iterable)) {
     return iterFromIterable(iterable);
   }
@@ -162,5 +162,3 @@ export function iterFromIterable(iterable) {
 export function iterFromGenerator(generator) {
   return extendIterator(generator());
 }
-
-export default iter;

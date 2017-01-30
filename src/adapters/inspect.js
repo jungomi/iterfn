@@ -11,11 +11,9 @@
  * @returns {Iterator} An iterator which calls a function before passing the
  * value on.
  */
-function* inspect(iter, func) {
+export default function* inspect(iter, func) {
   for (const val of iter) {
     func(val);
     yield val;
   }
 }
-
-export default inspect;

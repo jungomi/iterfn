@@ -18,7 +18,7 @@
  * @returns {Any|undefined} The final value of the accumulator or undefined when
  * no value is available.
  */
-function reduce(iter, func, initialValue) {
+export default function reduce(iter, func, initialValue) {
   if (initialValue === null || initialValue === undefined) {
     iter = iter[Symbol.iterator]();
     const { value, done } = iter.next();
@@ -33,5 +33,3 @@ function reduce(iter, func, initialValue) {
   }
   return acc;
 }
-
-export default reduce;

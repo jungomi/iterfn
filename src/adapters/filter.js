@@ -10,12 +10,10 @@
  * @returns {Iterator} An iterator which yields only the values that satisfy the
  * predicate.
  */
-function* filter(iterable, filterFunc) {
+export default function* filter(iterable, filterFunc) {
   for (const val of iterable) {
     if (filterFunc(val)) {
       yield val;
     }
   }
 }
-
-export default filter;

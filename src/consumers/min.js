@@ -6,7 +6,7 @@
  *
  * @returns {Any} The minimum value of the iterator.
  */
-function min(iter) {
+export default function min(iter) {
   iter = iter[Symbol.iterator]();
   const { value: initialValue, done } = iter.next();
   if (done) {
@@ -20,5 +20,3 @@ function min(iter) {
   }
   return minValue;
 }
-
-export default min;

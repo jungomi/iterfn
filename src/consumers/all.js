@@ -13,7 +13,7 @@
  *
  * @returns {boolean} Whether all values satisfy the predicate.
  */
-function all(iter, predicate) {
+export default function all(iter, predicate) {
   for (const val of iter) {
     if (!predicate(val)) {
       return false;
@@ -21,5 +21,3 @@ function all(iter, predicate) {
   }
   return true;
 }
-
-export default all;

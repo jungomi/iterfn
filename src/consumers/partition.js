@@ -12,7 +12,7 @@
  * contains values for which the predicate is true and the second contains all
  * values for which it is false.
  */
-function partition(iter, predicate) {
+export default function partition(iter, predicate) {
   const left = [];
   const right = [];
   for (const val of iter) {
@@ -24,5 +24,3 @@ function partition(iter, predicate) {
   }
   return [left, right];
 }
-
-export default partition;

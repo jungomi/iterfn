@@ -7,7 +7,7 @@
  *
  * @returns {Iterator} A fused iterator.
  */
-function* fuse(iter) {
+export default function* fuse(iter) {
   for (const val of iter) {
     if (val === null || val === undefined) {
       return;
@@ -15,5 +15,3 @@ function* fuse(iter) {
     yield val;
   }
 }
-
-export default fuse;

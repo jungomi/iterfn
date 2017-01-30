@@ -11,7 +11,7 @@
  * @returns {number|undefined} The index of the first value which satisfied the
  * predicate or -1 if no value satisfied it.
  */
-function position(iter, predicate) {
+export default function position(iter, predicate) {
   let index = 0;
   for (const val of iter) {
     if (predicate(val)) {
@@ -21,5 +21,3 @@ function position(iter, predicate) {
   }
   return -1;
 }
-
-export default position;
