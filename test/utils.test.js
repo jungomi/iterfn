@@ -1,5 +1,5 @@
 import test from 'ava';
-import { isGeneratorFunction, isIterable } from '../src/utils';
+import { isGeneratorFunction, isIterable, isIterator } from '../src/utils';
 
 test('isGeneratorFunction is true for generator functions', t => {
   function* gen() {}
@@ -55,4 +55,24 @@ test('isIterable is false for non-iterables', t => {
 
   t.false(isIterable(emptyObj));
   t.false(isIterable(wrongType));
+});
+
+test('isIterator is true for iterators', t => {
+  const iter = {
+    next() {
+      return { done: true };
+    }
+  };
+
+  t.true(isIterator(iter));
+});
+
+test('isIterator is false for non-iterators', t => {
+  const emptyObj = {};
+  const wrongType = {
+    next: 'wrong type'
+  };
+
+  t.false(isIterator(emptyObj));
+  t.false(isIterator(wrongType));
 });

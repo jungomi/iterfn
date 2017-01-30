@@ -1,22 +1,22 @@
 import * as adapters from './adapters';
 import * as consumers from './consumers';
-import { isGeneratorFunction, isIterable } from './utils';
+import { isGeneratorFunction, isIterable, isIterator } from './utils';
 
 export * from './adapters';
 export * from './consumers';
 
 /**
- * Turns an iterable object or a generator function into an iterator and adds
- * methods to easily operate on the values. These methods can be chained until
- * a consumer is called.
+ * Turns an iterable object, iterator object or a generator function into an
+ * iterator that is also iterable and adds methods to easily operate on the
+ * values. These methods can be chained until a consumer is called.
  *
- * @param {Iterable|Generator} iterable An iterable object or generator function
- * that can be turned into an iterator.
+ * @param {Iterable|Iterator|Generator} iterable An iterable object, iterator
+ * object or generator function that can be turned into an iterator.
  *
  * @throws {TypeError} Throws when the input cannot be converted to an iterator.
  *
- * @returns {Iterator} An iterator with additional methods to operate on its
- * values.
+ * @returns {Iterator} An iterable iterator with additional methods to operate
+ * on its values.
  */
 export default function iter(iterable) {
   if (isIterable(iterable)) {
@@ -24,6 +24,9 @@ export default function iter(iterable) {
   }
   if (isGeneratorFunction(iterable)) {
     return iterFromGenerator(iterable);
+  }
+  if (isIterator(iterable)) {
+    return iterFromIterator(iterable);
   }
 
   throw new TypeError('Could not convert to iterator');
@@ -164,4 +167,13 @@ export function iterFromIterable(iterable) {
  */
 export function iterFromGenerator(generator) {
   return extendIterator(generator());
+}
+
+export function iterFromIterator(iterator) {
+  if (!isIterable(iterator)) {
+    iterator[Symbol.iterator] = function() {
+      return this;
+    };
+  }
+  return extendIterator(iterator);
 }

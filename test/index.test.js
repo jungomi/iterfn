@@ -20,6 +20,26 @@ test('iter returns a correct iterator for iterables and generators', t => {
   t.true(arrayIter.next().done);
 });
 
+test('iter makes an iterator also iterable', t => {
+  const iterObj = {
+    index: 0,
+    next() {
+      if (this.index >= 3) {
+        return { done: true };
+      }
+      this.index += 1;
+      return { value: this.index, done: false };
+    }
+  };
+  const iterator = iter(iterObj);
+
+  t.is(typeof iterator[Symbol.iterator], 'function');
+  t.is(iterator.next().value, 1);
+  t.is(iterator.next().value, 2);
+  t.is(iterator.next().value, 3);
+  t.true(iterator.next().done);
+});
+
 test('iter throws when not passing an iterator', t => {
   const obj = {};
   const num = 2;

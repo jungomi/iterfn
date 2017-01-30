@@ -21,3 +21,14 @@ export function isGeneratorFunction(obj) {
 export function isIterable(obj) {
   return typeof obj[Symbol.iterator] === 'function';
 }
+
+/**
+ * Checks whether the given objet is an iterator.
+ *
+ * @param {Object} obj An object to be checked.
+ *
+ * @returns {boolean} Whether the object is an iterator.
+ */
+export function isIterator(obj) {
+  return typeof obj.next === 'function';
+}
