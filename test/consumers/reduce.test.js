@@ -20,3 +20,17 @@ test('reduce returns undefined when there is no value', t => {
 
   t.is(result, undefined);
 });
+
+test('reduce uses the initial value when it is supplied', t => {
+  const result = reduce([1, 2, 3, 4], (acc, x) => acc + x, 5);
+
+  t.is(result, 15);
+});
+
+test('reduce does not apply the function to the first value', t => {
+  const result = reduce([2, 3, 4], (acc, x) => acc + x * 2);
+  const resultInit = reduce([2, 3, 4], (acc, x) => acc + x * 2, 0);
+
+  t.is(result, 16);
+  t.is(resultInit, 18);
+});

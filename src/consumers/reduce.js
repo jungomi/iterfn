@@ -1,8 +1,11 @@
-function reduce(iter, func) {
-  iter = iter[Symbol.iterator]();
-  const { value: initialValue, done } = iter.next();
-  if (done) {
-    return;
+function reduce(iter, func, initialValue) {
+  if (initialValue === null || initialValue === undefined) {
+    iter = iter[Symbol.iterator]();
+    const { value, done } = iter.next();
+    if (done) {
+      return;
+    }
+    initialValue = value;
   }
   let acc = initialValue;
   for (const val of iter) {
