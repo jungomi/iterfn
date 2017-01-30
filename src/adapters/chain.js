@@ -3,7 +3,7 @@
  * sequence. It will first iterate over the values from the first iterator, then
  * the second and so on.
  *
- * @param {Iterator} ...iterables The iterators that will be chained.
+ * @param {...Iterator} iterables The iterators that will be chained.
  *
  * @returns {Iterator} A chained iterator.
  */
