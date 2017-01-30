@@ -2,6 +2,9 @@ import * as adapters from './adapters';
 import * as consumers from './consumers';
 import { isGeneratorFunction, isIterable } from './utils';
 
+export * from './adapters';
+export * from './consumers';
+
 /**
  * Turns an iterable object or a generator function into an iterator and adds
  * methods to easily operate on the values. These methods can be chained until
