@@ -1,3 +1,11 @@
+/**
+ * Returns the minimum value of an iterator. If two values are equally minimum,
+ * the first value is returned.
+ *
+ * @param {Iterator} iter An iterator to find the minimum value.
+ *
+ * @returns {Any} The minimum value of the iterator.
+ */
 function min(iter) {
   iter = iter[Symbol.iterator]();
   const { value: initialValue, done } = iter.next();

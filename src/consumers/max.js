@@ -1,3 +1,11 @@
+/**
+ * Returns the maximum value of an iterator. If two values are equally maximum,
+ * the last value is returned.
+ *
+ * @param {Iterator} iter An iterator to find the maximum value.
+ *
+ * @returns {Any} The maximum value of the iterator.
+ */
 function max(iter) {
   iter = iter[Symbol.iterator]();
   const { value: initialValue, done } = iter.next();
