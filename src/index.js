@@ -106,6 +106,9 @@ export function extendIterator(iter) {
     find(predicate) {
       return consumers.find(this, predicate);
     },
+    forEach(func) {
+      return consumers.forEach(this, func);
+    },
     fold(initialValue, func) {
       return consumers.fold(this, initialValue, func);
     },

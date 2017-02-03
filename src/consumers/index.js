@@ -4,6 +4,7 @@ import collect from './collect';
 import count from './count';
 import find from './find';
 import fold from './fold';
+import forEach from './forEach';
 import last from './last';
 import max from './max';
 import min from './min';
@@ -22,6 +23,7 @@ export {
   count,
   find,
   fold,
+  forEach,
   last,
   max,
   min,
