@@ -130,8 +130,8 @@ export function extendIterator(iter) {
     product() {
       return consumers.product(this);
     },
-    reduce(func) {
-      return consumers.reduce(this, func);
+    reduce(func, initialValue) {
+      return consumers.reduce(this, func, initialValue);
     },
     sum() {
       return consumers.sum(this);
