@@ -172,6 +172,17 @@ export function iterFromGenerator(generator) {
   return extendIterator(generator());
 }
 
+/**
+ * Turns an iterator object into an iterable iterator and adds methods to easily
+ * operate on the values. Usually an iterator is iterable as well, but it is
+ * not a requirement.
+ *
+ * @param {Iterator} iterator An iterator object to be turned into an iterable
+ * iterator.
+ *
+ * @returns {Iterator} An iterator with additional methods to operate on its
+ * values.
+ */
 export function iterFromIterator(iterator) {
   if (!isIterable(iterator)) {
     iterator[Symbol.iterator] = function() {
