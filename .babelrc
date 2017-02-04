@@ -1,9 +1,24 @@
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "node": "current"
-      }
-    }]
-  ]
+  "env": {
+    "browser": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 versions"]
+          },
+          "modules": "umd"
+        }]
+      ],
+      "plugins": ["transform-runtime"]
+    },
+    "commonjs": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ]
+    }
+  }
 }

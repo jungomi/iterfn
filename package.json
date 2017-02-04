@@ -9,11 +9,12 @@
   "author": "Michael Jungo <michaeljungo92@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "docs": "documentation build -f html -o docs --github $npm_package_module --name $npm_package_name --project-version $npm_package_version",
+    "build": "BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:browser": "BABEL_ENV=browser NODE_ENV=production webpack --progress",
+    "docs": "documentation build -f html -o docs src/index.js --github --name $npm_package_name --project-version $npm_package_version",
     "lint": "eslint .",
     "test": "ava --verbose",
-    "clean": "rimraf lib docs"
+    "clean": "rimraf lib dist docs"
   },
   "ava": {
     "babel": "inherit",
@@ -25,9 +26,12 @@
     "ava": "^0.17.0",
     "babel-cli": "^6.22.2",
     "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.1.8",
     "documentation": "^4.0.0-beta.18",
     "eslint": "^3.14.1",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "webpack": "^2.2.1"
   }
 }
