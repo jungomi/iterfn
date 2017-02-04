@@ -11,6 +11,12 @@
  * value.
  *
  * @returns {Any} The final value of the accumulator.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * const sum = fold(a, 0, (acc, x) => acc + x); // 6
+ * const sumOffset = fold(a, 10, (acc, x) => acc + x); // 16
  */
 export default function fold(iter, initialValue, func) {
   let acc = initialValue;

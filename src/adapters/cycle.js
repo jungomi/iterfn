@@ -5,6 +5,18 @@
  * @param {Iterator} iter An iterator to be repeated indefinitely.
  *
  * @returns {Iterator} An infinite iterator.
+ *
+ * @example
+ * const a = [1, 2];
+ *
+ * const iter = cycle(a);
+ *
+ * iter.next(); // { value: 1, done: false }
+ * iter.next(); // { value: 2, done: false }
+ * iter.next(); // { value: 1, done: false }
+ * iter.next(); // { value: 2, done: false }
+ * iter.next(); // { value: 1, done: false }
+ * // etc.
  */
 export default function* cycle(iter) {
   const values = [];

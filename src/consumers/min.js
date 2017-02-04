@@ -5,6 +5,12 @@
  * @param {Iterator} iter An iterator to find the minimum value.
  *
  * @returns {Any} The minimum value of the iterator.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * min(a); // 1
+ * min([]); // undefined
  */
 export default function min(iter) {
   iter = iter[Symbol.iterator]();

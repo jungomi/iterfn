@@ -6,6 +6,13 @@
  *
  * @returns {[Array, Array]} An array containing two arrays where each contains
  * the values of the respective position in the pair of the iterator.
+ *
+ * @example
+ * const a = [[0, 'a'], [1, 'b']];
+ *
+ * const [left, right] = unzip(a);
+ * left;  // [0, 1]
+ * right; // ['a', 'b']
  */
 export default function unzip(iter) {
   const left = [];

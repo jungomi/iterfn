@@ -8,8 +8,15 @@
  * iterator and returns a boolean. When it returns true for a value, its index
  * is returned and all further values are ignored.
  *
- * @returns {number|undefined} The index of the first value which satisfied the
+ * @returns {number} The index of the first value which satisfied the
  * predicate or -1 if no value satisfied it.
+ *
+ * @example
+ * const a = [1, 2, 3, 4, 5];
+ *
+ * position(a, x => x === 4); // 3
+ * position(a, x => x > 4); // 4
+ * position(a, x => x > 10); // -1
  */
 export default function position(iter, predicate) {
   let index = 0;

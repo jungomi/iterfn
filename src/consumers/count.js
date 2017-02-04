@@ -6,6 +6,11 @@
  * @param {Iterator} iter An iterator to be counted.
  *
  * @returns {number} The number of iterations.
+ *
+ * @example
+ * const a = [1, 2, 3, 4, 5];
+ *
+ * count(a); // 5
  */
 export default function count(iter) {
   iter = iter[Symbol.iterator]();

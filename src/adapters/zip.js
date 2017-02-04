@@ -11,6 +11,35 @@
  *
  * @returns {Iterator} An iterator which yields a pair of values from the two
  * iterators.
+ *
+ * @example
+ * const a1 = [1, 2, 3];
+ * const a2 = [4, 5, 6];
+ *
+ * const iter = zip(a1, a2);
+ *
+ * iter.next(); // { value: [1, 4], done: false }
+ * iter.next(); // { value: [2, 5], done: false }
+ * iter.next(); // { value: [3, 6], done: false }
+ * iter.next(); // { value: undefined, done: true }
+ *
+ * @example
+ * // This can be used to zip an infinite iterator to a finite one
+ * function* naturalNumbers() {
+ *   let i = 0;
+ *   while (true) {
+ *     yield i;
+ *     i += 1;
+ *   }
+ * }
+ * const a = ['a', 'b', 'c'];
+ *
+ * const iter = zip(naturalNumbers(), a);
+ *
+ * iter.next(); // { value: [0, 'a'], done: false }
+ * iter.next(); // { value: [1, 'b'], done: false }
+ * iter.next(); // { value: [2, 'c'], done: false }
+ * iter.next(); // { value: undefined, done: true }
  */
 export default function* zip(iterable1, iterable2) {
   const iter1 = iterable1[Symbol.iterator]();

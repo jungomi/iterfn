@@ -7,6 +7,16 @@
  * @param {Iterator} iter An iterator to be reversed.
  *
  * @returns {Iterator} A reversed iterator.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * const iter = reverse(a);
+ *
+ * iter.next(); // { value: 3, done: false }
+ * iter.next(); // { value: 2, done: false }
+ * iter.next(); // { value: 1, done: false }
+ * iter.next(); // { value: undefined, done: false }
  */
 export default function* reverse(iter) {
   const values = [];

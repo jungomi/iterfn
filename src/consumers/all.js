@@ -12,6 +12,12 @@
  * iterator and returns a boolean.
  *
  * @returns {boolean} Whether all values satisfy the predicate.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * all(a, x => x > 0); // true
+ * all(a, x => x < 2); // false
  */
 export default function all(iter, predicate) {
   for (const val of iter) {

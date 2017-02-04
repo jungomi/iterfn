@@ -4,6 +4,11 @@
  * @param {Iterator} iter An iterator whose values are multiplied.
  *
  * @returns {number} The result of multiplying all values of the iterator.
+ *
+ * @example
+ * const a = [1, 2, 3, 4];
+ *
+ * product(a); // 24
  */
 export default function product(iter) {
   let result = 1;

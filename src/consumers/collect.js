@@ -9,6 +9,28 @@
  * Array.from to create an Array.
  *
  * @returns {Any} A collection constructed from the values of the iterator.
+ *
+ * @example
+ * function* helloWorld() {
+ *   yield 'hello';
+ *   yield ' ';
+ *   yield 'world';
+ * }
+ *
+ * collect(helloWorld()); // ['hello', ' ', 'world']
+ *
+ * // Custom function to create a collection out of an iterator
+ * function concatIter(iter) {
+ *   let str = ';
+ *   for (const val of iter) {
+ *     str += val;
+ *   }
+ *   return str;
+ * }
+ * const a = [1, 2, 3, 4];
+ *
+ * collect(helloWorld(), concatIter); // 'hello world'
+ * collect(a, concatIter); // '1234'
  */
 export default function collect(iter, fromIter = Array.from) {
   return fromIter(iter);

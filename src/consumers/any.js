@@ -12,6 +12,12 @@
  * iterator and returns a boolean.
  *
  * @returns {boolean} Whether any value satisfies the predicate.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * any(a, x => x > 0); // true
+ * any(a, x => x > 5); // false
  */
 export default function any(iter, predicate) {
   for (const val of iter) {

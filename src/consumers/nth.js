@@ -10,6 +10,12 @@
  *
  * @returns {Any|undefined} The nth value or undefined if n is greater than or
  * equal to the number of values in the iterator.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * nth(a, 2); // 2
+ * nth(a, 5); // undefined
  */
 export default function nth(iter, n) {
   for (const val of iter) {

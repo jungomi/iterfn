@@ -9,6 +9,22 @@
  * next value, and if it returns any other value, the returned value is yielded.
  *
  * @returns {Iterator} An iterator which yields the filtered and mapped values.
+ *
+ * @example
+ * const a = [1, 2, 3, 4, 5, 6];
+ * const squareOdd = x => {
+ *   if (x % 2 === 0) {
+ *     return null;
+ *   }
+ *   return x * x;
+ * };
+ *
+ * const iter = filterMap(a, squareOdd);
+ *
+ * iter.next(); // { value: 1, done: false }
+ * iter.next(); // { value: 9, done: false }
+ * iter.next(); // { value: 25, done: false }
+ * iter.next(); // { value: undefined, done: true }
  */
 export default function* filterMap(iter, func) {
   for (const val of iter) {

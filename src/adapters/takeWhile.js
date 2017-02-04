@@ -9,6 +9,17 @@
  *
  * @returns {Iterator} An iterator which yields values while the predicate is
  * true.
+ *
+ * @example
+ * const a = [1, 3, 6, 11, 13, 2, 4];
+ *
+ * const iter = takeWhile(a, x => x < 10);
+ *
+ * iter.next(); // { value: 1, done: false }
+ * iter.next(); // { value: 3, done: false }
+ * iter.next(); // { value: 6, done: false }
+ * iter.next(); // { value: undefined, done: true }
+ * // There are more values below 10 but takeWhile stops after the first false
  */
 export default function* takeWhile(iter, predicate) {
   for (const val of iter) {

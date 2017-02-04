@@ -13,6 +13,16 @@
  * value, which is also yielded.
  *
  * @returns {Iterator} An iterator which yields each step of the accumulator.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * const iter = scan(a, 1, (acc, x) => acc * x);
+ *
+ * iter.next(); // { value: 1, done: false }
+ * iter.next(); // { value: 2, done: false }
+ * iter.next(); // { value: 6, done: false }
+ * iter.next(); // { value: undefined, done: false }
  */
 export default function* scan(iter, initialValue, func) {
   let acc = initialValue;

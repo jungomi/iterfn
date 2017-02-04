@@ -17,6 +17,17 @@
  *
  * @returns {Any|undefined} The final value of the accumulator or undefined when
  * no value is available.
+ *
+ * @example
+ * const a = [2, 4, 6];
+ *
+ * reduce(a, (acc, x) => acc + x); // 12
+ * reduce(a, (acc, x) => acc + x, 10); // 22
+ *
+ * // If no initial value is provided, the first value is not built with the
+ * // given function, but simply given as the accumulator to the first call.
+ * reduce(a, (acc, x) => acc + x * 3) // 32
+ * reduce(a, (acc, x) => acc + x * 3, 0) // 36
  */
 export default function reduce(iter, func, initialValue) {
   if (initialValue === null || initialValue === undefined) {

@@ -11,6 +11,13 @@
  *
  * @returns {Any|undefined} The first value which satisfied the predicate or
  * undefined if no value satisfied it.
+ *
+ * @example
+ * const a = [1, 2, 3, 4, 5];
+ *
+ * find(a, x => x === 4); // 4
+ * find(a, x => x > 4); // 5
+ * find(a, x => x > 10); // undefined
  */
 export default function find(iter, predicate) {
   for (const val of iter) {

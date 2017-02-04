@@ -5,6 +5,12 @@
  * @param {Iterator} iter An iterator to find the maximum value.
  *
  * @returns {Any} The maximum value of the iterator.
+ *
+ * @example
+ * const a = [1, 2, 3];
+ *
+ * max(a); // 3
+ * max([]); // undefined
  */
 export default function max(iter) {
   iter = iter[Symbol.iterator]();
