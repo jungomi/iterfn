@@ -13,7 +13,7 @@
     "build:browser": "BABEL_ENV=browser NODE_ENV=production webpack --progress",
     "docs": "documentation build -f html -o docs src/index.js --github --name $npm_package_name --project-version $npm_package_version",
     "lint": "eslint .",
-    "test": "ava --verbose",
+    "test": "BABEL_ENV=commonjs ava --verbose",
     "clean": "rimraf lib dist docs"
   },
   "ava": {
@@ -23,7 +23,7 @@
     ]
   },
   "devDependencies": {
-    "ava": "^0.18.0",
+    "ava": "^0.18.1",
     "babel-cli": "^6.22.2",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
