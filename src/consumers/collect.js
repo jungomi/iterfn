@@ -21,7 +21,7 @@
  *
  * // Custom function to create a collection out of an iterator
  * function concatIter(iter) {
- *   let str = ';
+ *   let str = '';
  *   for (const val of iter) {
  *     str += val;
  *   }
