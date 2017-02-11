@@ -1,0 +1,67 @@
+toc:
+  - name: Default
+    description: |
+      ```javascript
+      import iter from 'iterator-adapters';
+      ```
+  - iter
+  - name: Adapters
+    description: |
+      An adapter takes an iterator and returns another iterator.
+  - chain
+  - cycle
+  - enumerate
+  - filter
+  - filterMap
+  - flatMap
+  - fuse
+  - inspect
+  - map
+  - reverse
+  - scan
+  - skip
+  - skipWhile
+  - take
+  - takeWhile
+  - zip
+  - name: Consumers
+    description: |
+      A consumer takes an iterator and consumes it to produce a value.
+      Infinite operators result in an infinite loop, unless the function
+      short-circuits.
+  - all
+  - any
+  - collect
+  - count
+  - find
+  - fold
+  - forEach
+  - last
+  - max
+  - min
+  - nth
+  - partition
+  - position
+  - product
+  - reduce
+  - sum
+  - unzip
+  - name: Extension
+    description: |
+      Directly create an extended iterator.
+  - extendIterator
+  - iterFromIterable
+  - iterFromGenerator
+  - iterFromIterator
+  - name: Utils
+    description: |
+      Utility functions to determine the potential iterator types.
+
+      Required to be imported from lib/utils.
+      ```javascript
+      import * as utils from 'iterator-adapters/lib/utils';
+      ```
+  - isGeneratorFunction
+  - isIterable
+  - isIterator
+

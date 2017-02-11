@@ -167,7 +167,7 @@ export function iterFromIterable(iterable) {
  * Turns a generator function into an iterator and adds methods to easily
  * operate on the values.
  *
- * @param {Iterable} generator A generator function that return an iterator.
+ * @param {Generator} generator A generator function that return an iterator.
  *
  * @returns {Iterator} An iterator with additional methods to operate on its
  * values.

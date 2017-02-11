@@ -12,7 +12,7 @@
   "scripts": {
     "build": "BABEL_ENV=commonjs babel src --out-dir lib",
     "build:browser": "BABEL_ENV=browser NODE_ENV=production webpack --progress",
-    "docs": "documentation build -f html -o docs src/index.js --github --name $npm_package_name --project-version $npm_package_version",
+    "docs": "documentation build -f html -o docs src/index.js --config documentation.yml --github --name $npm_package_name --project-version $npm_package_version",
     "lint": "eslint .",
     "test": "BABEL_ENV=commonjs ava --verbose",
     "clean": "rimraf lib dist docs"
