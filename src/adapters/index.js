@@ -31,5 +31,5 @@ export {
   skipWhile,
   take,
   takeWhile,
-  zip,
+  zip
 };

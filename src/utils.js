@@ -1,4 +1,4 @@
-const Generator = function* () {}.constructor;
+const Generator = (function*() {}).constructor;
 
 /**
  * Checks whether the given object is a generator function.

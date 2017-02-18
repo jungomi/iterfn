@@ -136,7 +136,6 @@ export default function iter(iterable) {
   throw new TypeError('Could not convert to iterator');
 }
 
-
 /**
  * Adds methods that call the respective functions on the iterator which can be
  * chained as long as the functions return another iterator.

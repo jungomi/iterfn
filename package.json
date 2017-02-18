@@ -13,6 +13,7 @@
     "build": "BABEL_ENV=commonjs babel src --out-dir lib",
     "build:browser": "BABEL_ENV=browser NODE_ENV=production webpack --progress",
     "docs": "documentation build -f html -o docs src/index.js --config documentation.yml --github --name $npm_package_name --project-version $npm_package_version",
+    "fix": "eslint . --fix",
     "lint": "eslint .",
     "test": "BABEL_ENV=commonjs ava --verbose",
     "clean": "rimraf lib dist docs"
@@ -32,6 +33,8 @@
     "babel-preset-env": "^1.1.8",
     "documentation": "^4.0.0-beta.18",
     "eslint": "^3.14.1",
+    "eslint-plugin-prettier": "^2.0.0",
+    "prettier": "^0.18.0",
     "rimraf": "^2.5.4",
     "webpack": "^2.2.1"
   }

@@ -4,7 +4,7 @@ import { isGeneratorFunction, isIterable, isIterator } from '../src/utils';
 test('isGeneratorFunction is true for generator functions', t => {
   function* gen() {}
   const obj = {
-    * gen() {}
+    *gen() {}
   };
 
   t.true(isGeneratorFunction(gen));

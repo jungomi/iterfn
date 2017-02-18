@@ -12,7 +12,11 @@
   "extends": [
     "eslint:recommended"
   ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "array-bracket-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
     "arrow-spacing": ["error",{ "before": true, "after": true }],
@@ -27,7 +31,6 @@
     "dot-notation": "warn",
     "eol-last": "error",
     "eqeqeq": "error",
-    "generator-star-spacing": ["error", "after"],
     "handle-callback-err": "error",
     "indent": ["error", 2],
     "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
