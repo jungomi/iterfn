@@ -1,7 +1,27 @@
 # iterfn
 
-A collection of functions to operate on iterators similar to Rust's [Iterator
+A collection of functions to work with iterators similar to Rust's [Iterator
 trait][iter-trait].
+
+Iterators are very useful to work with collections and it's worth knowing that
+not everything needs to be an array. A very good and detailed explanation of
+iterators and iterables can be found in
+[Chapter 21. Iterables and iterators][es-iter] of the book
+[Exploring ES6][exploringjs].
+
+## Motivation
+
+In JavaScript the most well known iterables are arrays. Whenever you want to use
+methods of [Array.prototype][array-prototype] like `map` or `filter`, you'd
+usually create an array from your data type. For instance a [Set][set] object is
+iterable, so you would expect it to have the same functions as array. Sadly
+that's not the case. This library makes it very convenient to work with
+iterables and iterators.
+
+Another great aspect of iterators is their laziness. This makes it possible to
+use infinite iterators and also allows you to chain multiple methods without
+having to evaluate all values before reaching the next step in the chain. This
+also means that you won't allocate a new array after each transformation.
 
 ## Usage
 
@@ -48,6 +68,10 @@ const count = iter(generator()).count(); // 3
 // iter also accepts a generator function directly
 const lastSquare = iter(generator).map(x => x * x).last(); // 25
 ```
+
+An object can be an iterator or an iterable or both at the same time. `iter`
+will create an iterable iterator whenever possible, that is an iterator that is
+also iterable, so you don't have to worry about distinguishing them.
 
 ### Using functions directly
 
@@ -306,4 +330,8 @@ const longSpread = [
 ]; // [4, 2, 5, 5]
 ```
 
+[array-prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
+[es-iter]: http://exploringjs.com/es6/ch_iteration.html
+[exploringjs]:  http://exploringjs.com/es6.html
 [iter-trait]: https://doc.rust-lang.org/std/iter/trait.Iterator.html
+[set]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
