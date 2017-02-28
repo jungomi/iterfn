@@ -5,8 +5,8 @@ const config = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    filename: 'iter.min.js',
-    library: 'Iter',
+    filename: 'iterfn.min.js',
+    library: 'iterfn',
     libraryTarget: 'umd'
   },
   module: {
