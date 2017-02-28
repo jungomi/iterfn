@@ -1,4 +1,5 @@
 const path = require('path');
+const BabiliPlugin = require('babili-webpack-plugin');
 const webpack = require('webpack');
 
 const config = {
@@ -28,15 +29,7 @@ const config = {
       minimize: true,
       debug: false
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      output: {
-        comments: false
-      },
-      sourceMap: false
-    })
+    new BabiliPlugin()
   ],
   stats: {
     colors: true

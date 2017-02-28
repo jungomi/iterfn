@@ -6,10 +6,10 @@
           "targets": {
             "browsers": ["last 2 versions"]
           },
-          "modules": "umd"
+          "modules": "umd",
+          "exclude": ["transform-regenerator"]
         }]
-      ],
-      "plugins": ["transform-runtime"]
+      ]
     },
     "commonjs": {
       "presets": [
