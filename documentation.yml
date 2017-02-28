@@ -2,7 +2,7 @@ toc:
   - name: Default
     description: |
       ```javascript
-      import iter from 'iterator-adapters';
+      import iter from 'iterfn';
       ```
   - iter
   - name: Adapters
@@ -59,7 +59,7 @@ toc:
 
       Required to be imported from lib/utils.
       ```javascript
-      import * as utils from 'iterator-adapters/lib/utils';
+      import * as utils from 'iterfn/lib/utils';
       ```
   - isGeneratorFunction
   - isIterable

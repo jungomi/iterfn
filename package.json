@@ -1,7 +1,7 @@
 {
-  "name": "iterator-adapters",
+  "name": "iterfn",
   "version": "0.1.0",
-  "description": "Functions which take an iterator and return another iterator",
+  "description": "Functions to work with iterators and iterables",
   "main": "lib/index.js",
   "browser": "dist/iter.min.js",
   "module": "src/index.js",

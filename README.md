@@ -1,4 +1,4 @@
-# iterator-adapters
+# iterfn
 
 A collection of functions to operate on iterators similar to Rust's [Iterator
 trait][iter-trait].
@@ -6,7 +6,7 @@ trait][iter-trait].
 ## Usage
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 const sum = iter([1, 2, 3, 4]).sum(); // 10
 
@@ -57,7 +57,7 @@ requires the user to supply a correct iterable. This also makes chaining more
 cumbersome.
 
 ```javascript
-import { map, filter, sum } from 'iterator-adapters';
+import { map, filter, sum } from 'iterfn';
 
 const regularSum = sum([1, 2, 3, 4]); // 10
 const sumSquaredEven = sum(map(filter([1, 2, 3, 4], x => x % 2 === 0), x => x * x)); // 20
@@ -78,7 +78,7 @@ not be possible by just creating an array from an iterator. On the other hand
 `cycle()` creates an infinite iterator.
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 function* positiveIntegers() {
   let i = 1;
@@ -112,7 +112,7 @@ functions are available for arrays, which return a new array and therefore it is
 possible to chain them. All the adapters can be chained as well.
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 const evenNumbers = iter([1, 2, 3, 4]).filter(x => x % 2 === 0);
 const doubled = iter([1, 2, 3, 4]).map(x => x * 2);
@@ -144,7 +144,7 @@ functions should usually not have any side effects, it is still important to
 know the evaluation order.
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 const doubledEven = iter([1, 2, 3])
   .filter(x => {
@@ -212,7 +212,7 @@ arrays are iterable but not iterators, where `[Symbol.iterator]()` creates an
 iterator from the array.
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 const arr = [1, 2, 3, 4];
 const arrIter = arr[Symbol.iterator]();
@@ -234,7 +234,7 @@ common consumer for arrays is `reduce()` which for instance can be used to sum
 all values.
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 const sumReduce = iter([1, 2, 3, 4]).reduce((acc, x) => acc + x); // 10
 const sum = iter([1, 2, 3, 4]).sum(); // 10
@@ -246,7 +246,7 @@ Some consumers seem rather useless for arrays, but are very nice to have for
 other iterables, that don't have properties like `length`.
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 function* numbers() {
   yield 1;
@@ -269,7 +269,7 @@ operator, without using this function. But it can definitely improve the
 readability of a long iterator chain.
 
 ```javascript
-import iter from 'iterator-adapters';
+import iter from 'iterfn';
 
 function* helloWorld() {
   yield 'hello';
