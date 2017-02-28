@@ -1,7 +1,7 @@
 /**
  * Creates an iterator which transforms each value into a new one.
  *
- * @param {Iterator} iterable An iterator to be mapped.
+ * @param {Iterable} iter An iterable to be mapped.
  *
  * @param {Function} mapFunc A function that transforms each value.
  *
@@ -17,8 +17,8 @@
  * iter.next(); // { value: 6, done: false }
  * iter.next(); // { value: undefined, done: true }
  */
-export default function* map(iterable, mapFunc) {
-  for (const val of iterable) {
+export default function* map(iter, mapFunc) {
+  for (const val of iter) {
     yield mapFunc(val);
   }
 }

@@ -1,10 +1,10 @@
 /**
- * Returns the minimum value of an iterator. If two values are equally minimum,
+ * Returns the minimum value of an iterable. If two values are equally minimum,
  * the first value is returned.
  *
- * @param {Iterator} iter An iterator to find the minimum value.
+ * @param {Iterable} iter An iterable to find the minimum value.
  *
- * @returns {Any} The minimum value of the iterator.
+ * @returns {Any} The minimum value of the iterable.
  *
  * @example
  * const a = [1, 2, 3];

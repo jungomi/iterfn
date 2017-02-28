@@ -1,9 +1,9 @@
 /**
- * Sums all values of the iterator.
+ * Sums all values of the iterable.
  *
- * @param {Iterator} iter An iterator whose values are added together.
+ * @param {Iterable} iter An iterable whose values are added together.
  *
- * @returns {number} The sum of all values of the iterator.
+ * @returns {number} The sum of all values of the iterable.
  *
  * @example
  * const a = [1, 2, 3, 4];

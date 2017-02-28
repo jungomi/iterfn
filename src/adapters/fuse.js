@@ -3,7 +3,7 @@
  * encountered. An iterator could potentially yield null or undefined before
  * being done and continue yielding more values afterwards.
  *
- * @param {Iterator} iter An iterator to be fused.
+ * @param {Iterable} iter An iterable to be fused.
  *
  * @returns {Iterator} A fused iterator.
  *

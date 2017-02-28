@@ -1,9 +1,9 @@
 /**
- * Consumes an iterator and returns the last value.
+ * Consumes an iterable and returns the last value.
  *
- * @param {Iterator} iter An iterator to be consumed.
+ * @param {Iterable} iter An iterable to be consumed.
  *
- * @returns {Any} The last value of the iterator.
+ * @returns {Any} The last value of the iterable.
  *
  * @example
  * const a = [1, 2, 3, 4, 5];

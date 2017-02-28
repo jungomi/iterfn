@@ -1,14 +1,14 @@
 /**
- * Transforms the iterator into a collection. By default an array is constructed
+ * Transforms the iterable into a collection. By default an array is constructed
  * unless a transformation function is supplied.
  *
- * @param {Iterator} iter An iterator to be transformed into a collection.
+ * @param {Iterable} iter An iterable to be transformed into a collection.
  *
  * @param {Function} [fromIter = Array.from] A function that receives the
- * iterator and returns a collection. When no function is given, it uses
+ * iterable and returns a collection. When no function is given, it uses
  * Array.from to create an Array.
  *
- * @returns {Any} A collection constructed from the values of the iterator.
+ * @returns {Any} A collection constructed from the values of the iterable.
  *
  * @example
  * function* helloWorld() {
@@ -19,7 +19,7 @@
  *
  * collect(helloWorld()); // ['hello', ' ', 'world']
  *
- * // Custom function to create a collection out of an iterator
+ * // Custom function to create a collection out of an iterable
  * function concatIter(iter) {
  *   let str = '';
  *   for (const val of iter) {

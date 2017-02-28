@@ -2,7 +2,7 @@
  * Creates an iterator which gives the current index as well as the value. The
  * index starts at 0.
  *
- * @param {Iterator} iter An iterator to be enumerated.
+ * @param {Iterable} iter An iterable to be enumerated.
  *
  * @returns {Iterator} An iterator which yields pairs of index and value.
  *

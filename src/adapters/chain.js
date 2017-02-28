@@ -1,9 +1,9 @@
 /**
- * Takes two or more iterators and creates a new iterator over their values in
- * sequence. It will first iterate over the values from the first iterator, then
+ * Takes two or more iterables and creates an iterator over their values in
+ * sequence. It will first iterate over the values from the first iterable, then
  * the second and so on.
  *
- * @param {...Iterator} iterables The iterators that will be chained.
+ * @param {...Iterable} iters The iterables that will be chained.
  *
  * @returns {Iterator} A chained iterator.
  *
@@ -19,8 +19,8 @@
  * iter.next(); // { value: 4, done: false };
  * iter.next(); // { value: undefined, done: true };
  */
-export default function* chain(...iterables) {
-  for (const iter of iterables) {
+export default function* chain(...iters) {
+  for (const iter of iters) {
     yield* iter;
   }
 }

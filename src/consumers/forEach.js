@@ -1,9 +1,9 @@
 /**
- * Applies a function to each value of the iterator and consumes it. This has
+ * Applies a function to each value of the iterable and consumes it. This has
  * the same effect as simply using a for-of loop, which should be preferred over
  * this.
  *
- * @param {Iterator} iter An iterator to be consumed.
+ * @param {Iterable} iter An iterable to be consumed.
  *
  * @param {Function} func A function that is called with each value.
  *

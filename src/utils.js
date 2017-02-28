@@ -23,7 +23,7 @@ export function isIterable(obj) {
 }
 
 /**
- * Checks whether the given objet is an iterator.
+ * Checks whether the given object is an iterator.
  *
  * @param {Object} obj An object to be checked.
  *

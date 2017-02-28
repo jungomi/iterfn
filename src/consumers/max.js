@@ -1,10 +1,10 @@
 /**
- * Returns the maximum value of an iterator. If two values are equally maximum,
+ * Returns the maximum value of an iterable. If two values are equally maximum,
  * the last value is returned.
  *
- * @param {Iterator} iter An iterator to find the maximum value.
+ * @param {Iterable} iter An iterable to find the maximum value.
  *
- * @returns {Any} The maximum value of the iterator.
+ * @returns {Any} The maximum value of the iterable.
  *
  * @example
  * const a = [1, 2, 3];

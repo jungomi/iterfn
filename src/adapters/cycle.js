@@ -1,8 +1,8 @@
 /**
- * Repeats an iterator indefinitely. When the iterator is done, it will start
+ * Repeats an iterable indefinitely. When the iterable is done, it will start
  * again from the beginning.
  *
- * @param {Iterator} iter An iterator to be repeated indefinitely.
+ * @param {Iterable} iter An iterable to be repeated indefinitely.
  *
  * @returns {Iterator} An infinite iterator.
  *

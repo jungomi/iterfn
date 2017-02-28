@@ -4,13 +4,13 @@
  * accumulator, making the last value equivalent to the output of fold or
  * reduce.
  *
- * @param {Iterator} iter An iterator to be scanned.
+ * @param {Iterable} iter An iterable to be scanned.
  *
  * @param {Any} initialValue The initial value of the accumulator.
  *
  * @param {Function} func A function that receives two arguments, the
- * accumulator and the current iterator value, and returns the new accumulated
- * value, which is also yielded.
+ * accumulator and the current value, and returns the new accumulated value,
+ * which is also yielded.
  *
  * @returns {Iterator} An iterator which yields each step of the accumulator.
  *

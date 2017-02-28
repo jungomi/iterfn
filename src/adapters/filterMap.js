@@ -2,9 +2,9 @@
  * Creates an iterator that both filters and maps. When the mapped value is null
  * or undefined, it is skipped, otherwise it will be yielded.
  *
- * @param {Iterator} iter An iterator to be filtered and mapped.
+ * @param {Iterable} iter An iterable to be filtered and mapped.
  *
- * @param {Function} func A function that receives the values of the iterator
+ * @param {Function} func A function that receives the values of the iterable
  * and returns a new value. If it returns null or undefined, it will move to the
  * next value, and if it returns any other value, the returned value is yielded.
  *

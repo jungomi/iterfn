@@ -1,7 +1,7 @@
 /**
  * Creates an iterator that skips the first n values.
  *
- * @param {Iterator} iter An iterator to skipped ahead.
+ * @param {Iterable} iter An iterable to be skipped ahead.
  *
  * @param {number} n The number of values to be skipped.
  *

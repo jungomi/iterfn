@@ -1,9 +1,9 @@
 /**
- * Multiplies all values of the iterator together.
+ * Multiplies all values of the iterable together.
  *
- * @param {Iterator} iter An iterator whose values are multiplied.
+ * @param {Iterable} iter An iterable whose values are multiplied.
  *
- * @returns {number} The result of multiplying all values of the iterator.
+ * @returns {number} The result of multiplying all values of the iterable.
  *
  * @example
  * const a = [1, 2, 3, 4];

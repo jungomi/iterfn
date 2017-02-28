@@ -1,16 +1,16 @@
 /**
  * Creates an iterator which yields a pair of values that correspond to a value
- * from the first and the second iterator, and stops when one of the two
- * iterators is done.
+ * from the first and the second iterable, and stops when one of the two
+ * iterables is done.
  *
- * @param {Iterator} iterable1 An iterator which provides the first value in the
+ * @param {Iterable} iterable1 An iterable which provides the first value in the
  * pair of values.
  *
- * @param {Iterator} iterable2 An iterator which provides the second value in
+ * @param {Iterable} iterable2 An iterable which provides the second value in
  * the pair of values.
  *
  * @returns {Iterator} An iterator which yields a pair of values from the two
- * iterators.
+ * iterables.
  *
  * @example
  * const a1 = [1, 2, 3];

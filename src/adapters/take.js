@@ -1,9 +1,9 @@
 /**
- * Creates an iterator which yields the first n values.
+ * Creates an iterator which yields the first n values of the iterable.
  *
- * @param {Iterator} iter An iterator from which n values are taken.
+ * @param {Iterable} iter An iterable from which n values are taken.
  *
- * @param {number} n The number of values to take from the iterator.
+ * @param {number} n The number of values to take from the iterable.
  *
  * @returns {Iterator} An iterator which yields the first n values.
  *

@@ -1,11 +1,11 @@
 /**
- * Converts an iterator of pairs into two arrays, where each contains the values
+ * Converts an iterable of pairs into two arrays, where each contains the values
  * of the respective position in the pair.
  *
- * @param {Iterator} iter An iterator of pairs to be unzipped.
+ * @param {Iterable} iter An iterable of pairs to be unzipped.
  *
  * @returns {[Array, Array]} An array containing two arrays where each contains
- * the values of the respective position in the pair of the iterator.
+ * the values of the respective position in the pair of the iterable.
  *
  * @example
  * const a = [[0, 'a'], [1, 'b']];
