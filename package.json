@@ -2,17 +2,10 @@
   "name": "iterfn",
   "version": "0.1.0",
   "description": "Functions to work with iterators and iterables",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jungomi/iterfn.git"
-  },
   "main": "lib/index.js",
   "browser": "dist/iterfn.min.js",
   "module": "src/index.js",
   "jsnext:main": "src/index.js",
-  "repository": {},
-  "author": "Michael Jungo <michaeljungo92@gmail.com>",
-  "license": "MIT",
   "scripts": {
     "build": "BABEL_ENV=commonjs babel src --out-dir lib",
     "build:browser": "BABEL_ENV=browser NODE_ENV=production webpack --progress",
@@ -22,6 +15,23 @@
     "test": "BABEL_ENV=commonjs ava --verbose",
     "clean": "rimraf lib dist docs"
   },
+  "author": "Michael Jungo <michaeljungo92@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jungomi/iterfn.git"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "iter",
+    "iterator",
+    "iterable",
+    "generator"
+  ],
   "ava": {
     "babel": "inherit",
     "require": [
