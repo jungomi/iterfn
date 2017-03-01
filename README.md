@@ -1,5 +1,7 @@
 # iterfn
 
+[![Build Status][travis-img]][travis]
+
 A collection of functions to work with iterators similar to Rust's [Iterator
 trait][iter-trait].
 
@@ -335,3 +337,5 @@ const longSpread = [
 [exploringjs]:  http://exploringjs.com/es6.html
 [iter-trait]: https://doc.rust-lang.org/std/iter/trait.Iterator.html
 [set]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+[travis]:  https://travis-ci.org/jungomi/iterfn
+[travis-img]: https://travis-ci.org/jungomi/iterfn.svg?branch=master
