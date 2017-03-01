@@ -7,7 +7,7 @@
     "url": "https://github.com/jungomi/iterfn.git"
   },
   "main": "lib/index.js",
-  "browser": "dist/iter.min.js",
+  "browser": "dist/iterfn.min.js",
   "module": "src/index.js",
   "jsnext:main": "src/index.js",
   "repository": {},
