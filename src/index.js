@@ -5,109 +5,18 @@ import { isGeneratorFunction, isIterable, isIterator } from './utils';
 export * from './adapters';
 export * from './consumers';
 
-const adapterExtension = {
-  chain(...iterables) {
-    return extendIterator(adapters.chain(this, ...iterables));
-  },
-  cycle() {
-    return extendIterator(adapters.cycle(this));
-  },
-  enumerate() {
-    return extendIterator(adapters.enumerate(this));
-  },
-  filter(filterFunc) {
-    return extendIterator(adapters.filter(this, filterFunc));
-  },
-  filterMap(func) {
-    return extendIterator(adapters.filterMap(this, func));
-  },
-  flatMap(mapFunc) {
-    return extendIterator(adapters.flatMap(this, mapFunc));
-  },
-  fuse() {
-    return extendIterator(adapters.fuse(this));
-  },
-  inspect(func) {
-    return extendIterator(adapters.inspect(this, func));
-  },
-  map(mapFunc) {
-    return extendIterator(adapters.map(this, mapFunc));
-  },
-  reverse() {
-    return extendIterator(adapters.reverse(this));
-  },
-  scan(initialValue, func) {
-    return extendIterator(adapters.scan(this, initialValue, func));
-  },
-  skip(n) {
-    return extendIterator(adapters.skip(this, n));
-  },
-  skipWhile(predicate) {
-    return extendIterator(adapters.skipWhile(this, predicate));
-  },
-  take(n) {
-    return extendIterator(adapters.take(this, n));
-  },
-  takeWhile(predicate) {
-    return extendIterator(adapters.takeWhile(this, predicate));
-  },
-  zip(otherIter) {
-    return extendIterator(adapters.zip(this, otherIter));
-  }
-};
-const consumerExtension = {
-  all(predicate) {
-    return consumers.all(this, predicate);
-  },
-  any(predicate) {
-    return consumers.any(this, predicate);
-  },
-  collect(fromIter) {
-    return consumers.collect(this, fromIter);
-  },
-  count() {
-    return consumers.count(this);
-  },
-  find(predicate) {
-    return consumers.find(this, predicate);
-  },
-  forEach(func) {
-    return consumers.forEach(this, func);
-  },
-  fold(initialValue, func) {
-    return consumers.fold(this, initialValue, func);
-  },
-  last() {
-    return consumers.last(this);
-  },
-  max() {
-    return consumers.max(this);
-  },
-  min() {
-    return consumers.min(this);
-  },
-  nth(n) {
-    return consumers.nth(this, n);
-  },
-  partition(predicate) {
-    return consumers.partition(this, predicate);
-  },
-  position(predicate) {
-    return consumers.position(this, predicate);
-  },
-  product() {
-    return consumers.product(this);
-  },
-  reduce(func, initialValue) {
-    return consumers.reduce(this, func, initialValue);
-  },
-  sum() {
-    return consumers.sum(this);
-  },
-  unzip() {
-    return consumers.unzip(this);
-  }
-};
+// All functions as methods with the current iterator as first argument
+const iterMethods = {};
+for (const key of Object.keys(adapters)) {
+  iterMethods[key] = function(...args) {
+    return extendIterator(adapters[key](this, ...args));
+  };
+}
+for (const key of Object.keys(consumers)) {
+  iterMethods[key] = function(...args) {
+    return consumers[key](this, ...args);
+  };
+}
 
 /**
  * Turns an iterable object, iterator object or a generator function into an
@@ -145,7 +54,7 @@ export default function iter(iterable) {
  * @returns {Iterator} The extended iterator.
  */
 export function extendIterator(iter) {
-  return Object.assign(iter, adapterExtension, consumerExtension);
+  return Object.assign(iter, iterMethods);
 }
 
 /**
