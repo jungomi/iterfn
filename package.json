@@ -39,17 +39,17 @@
     ]
   },
   "devDependencies": {
-    "ava": "^0.18.1",
-    "babel-cli": "^6.22.2",
+    "ava": "^0.18.2",
+    "babel-cli": "^6.23.0",
     "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.2.10",
-    "babel-preset-env": "^1.1.8",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.1.11",
     "babili-webpack-plugin": "^0.0.10",
     "documentation": "^4.0.0-beta.18",
-    "eslint": "^3.14.1",
-    "eslint-plugin-prettier": "^2.0.0",
-    "prettier": "^0.18.0",
-    "rimraf": "^2.5.4",
+    "eslint": "^3.16.1",
+    "eslint-plugin-prettier": "^2.0.1",
+    "prettier": "^0.20.0",
+    "rimraf": "^2.6.1",
     "webpack": "^2.2.1"
   }
 }
