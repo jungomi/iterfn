@@ -2,6 +2,8 @@
 
 [![Build Status][travis-img]][travis]
 
+[Documentation][docs]
+
 A collection of functions to work with iterators similar to Rust's [Iterator
 trait][iter-trait].
 
@@ -333,6 +335,7 @@ const longSpread = [
 ```
 
 [array-prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
+[docs]: https://jungomi.github.io/iterfn/
 [es-iter]: http://exploringjs.com/es6/ch_iteration.html
 [exploringjs]:  http://exploringjs.com/es6.html
 [iter-trait]: https://doc.rust-lang.org/std/iter/trait.Iterator.html
