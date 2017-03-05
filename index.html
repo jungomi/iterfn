@@ -1,0 +1,4372 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>iterfn 0.1.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>iterfn</h3>
+          <div class='mb1'><code>0.1.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#default'
+                  class="h5 bold black caps">
+                  Default
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iter'
+                  class="">
+                  iter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#adapters'
+                  class="h5 bold black caps">
+                  Adapters
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#chain'
+                  class="">
+                  chain
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cycle'
+                  class="">
+                  cycle
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#enumerate'
+                  class="">
+                  enumerate
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#filter'
+                  class="">
+                  filter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#filtermap'
+                  class="">
+                  filterMap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#flatmap'
+                  class="">
+                  flatMap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fuse'
+                  class="">
+                  fuse
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#inspect'
+                  class="">
+                  inspect
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#map'
+                  class="">
+                  map
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reverse'
+                  class="">
+                  reverse
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#scan'
+                  class="">
+                  scan
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#skip'
+                  class="">
+                  skip
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#skipwhile'
+                  class="">
+                  skipWhile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#take'
+                  class="">
+                  take
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#takewhile'
+                  class="">
+                  takeWhile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#zip'
+                  class="">
+                  zip
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#consumers'
+                  class="h5 bold black caps">
+                  Consumers
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#all'
+                  class="">
+                  all
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#any'
+                  class="">
+                  any
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#collect'
+                  class="">
+                  collect
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#count'
+                  class="">
+                  count
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#find'
+                  class="">
+                  find
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fold'
+                  class="">
+                  fold
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#foreach'
+                  class="">
+                  forEach
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#last'
+                  class="">
+                  last
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#max'
+                  class="">
+                  max
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#min'
+                  class="">
+                  min
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nth'
+                  class="">
+                  nth
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#partition'
+                  class="">
+                  partition
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#position'
+                  class="">
+                  position
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#product'
+                  class="">
+                  product
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reduce'
+                  class="">
+                  reduce
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sum'
+                  class="">
+                  sum
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#unzip'
+                  class="">
+                  unzip
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#extension'
+                  class="h5 bold black caps">
+                  Extension
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#extenditerator'
+                  class="">
+                  extendIterator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iterfromiterable'
+                  class="">
+                  iterFromIterable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iterfromgenerator'
+                  class="">
+                  iterFromGenerator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iterfromiterator'
+                  class="">
+                  iterFromIterator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#utils'
+                  class="h5 bold black caps">
+                  Utils
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isgeneratorfunction'
+                  class="">
+                  isGeneratorFunction
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isiterable'
+                  class="">
+                  isIterable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isiterator'
+                  class="">
+                  isIterator
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Default' class='mt0'>
+    Default
+  </h2>
+
+  
+    <pre class='hljs'><span class="hljs-keyword">import</span> iter <span class="hljs-keyword">from</span> <span class="hljs-string">'iterfn'</span>;</pre>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iter'>
+      iter
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/index.js#L34-L46'>
+      <span>src/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Turns an iterable object, iterator object or a generator function into an
+iterator that is also iterable and adds methods to easily operate on the
+values. These methods can be chained until a consumer is called.</p>
+
+
+  <div class='pre p1 fill-light mt0'>iter(iterable: (Iterable | Iterator | Generator)): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iterable</span> <code class='quiet'>((Iterable | Iterator | Generator))</code>
+	    An iterable object, iterator
+object or generator function that can be turned into an iterator.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterable iterator with additional methods to operate
+on its values.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>: Throws when the input cannot be converted to an iterator.
+</li>
+      
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Adapters' class='mt0'>
+    Adapters
+  </h2>
+
+  
+    <p>An adapter takes an iterator and returns another iterator.</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='chain'>
+      chain
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/chain.js#L22-L26'>
+      <span>src/adapters/chain.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Takes two or more iterables and creates an iterator over their values in
+sequence. It will first iterate over the values from the first iterable, then
+the second and so on.</p>
+
+
+  <div class='pre p1 fill-light mt0'>chain(iters: ...Iterable): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iters</span> <code class='quiet'>(...Iterable)</code>
+	    The iterables that will be chained.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        A chained iterator.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+<span class="hljs-keyword">const</span> a2 = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+<span class="hljs-keyword">const</span> iter = chain(a1, a2);
+
+iter.next(); <span class="hljs-comment">// { value: 1, done: false };</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false };</span>
+iter.next(); <span class="hljs-comment">// { value: 3, done: false };</span>
+iter.next(); <span class="hljs-comment">// { value: 4, done: false };</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true };</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cycle'>
+      cycle
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/cycle.js#L21-L33'>
+      <span>src/adapters/cycle.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Repeats an iterable indefinitely. When the iterable is done, it will start
+again from the beginning.</p>
+
+
+  <div class='pre p1 fill-light mt0'>cycle(iter: Iterable): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be repeated indefinitely.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An infinite iterator.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+
+<span class="hljs-keyword">const</span> iter = cycle(a);
+
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+<span class="hljs-comment">// etc.</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='enumerate'>
+      enumerate
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/enumerate.js#L19-L25'>
+      <span>src/adapters/enumerate.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which gives the current index as well as the value. The
+index starts at 0.</p>
+
+
+  <div class='pre p1 fill-light mt0'>enumerate(iter: Iterable): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be enumerated.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields pairs of index and value.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>];
+
+<span class="hljs-keyword">const</span> iter = enumerate(a);
+
+iter.next(); <span class="hljs-comment">// { value: [0, 'a'], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: [1, 'b'], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: [2, 'c'], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='filter'>
+      filter
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/filter.js#L24-L30'>
+      <span>src/adapters/filter.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which yields only the values that satisfy the predicate.</p>
+
+
+  <div class='pre p1 fill-light mt0'>filter(iterable: Iterable, filterFunc: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>, iter: any): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iterable</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be filtered.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>filterFunc</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean. If it returns true, the value is yielded, and
+if it returns false, it will move to the next value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields only the values that satisfy the
+predicate.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+<span class="hljs-keyword">const</span> isEven = <span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">const</span> iter = filter(a, isEven);
+
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 4, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 6, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='filtermap'>
+      filterMap
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/filterMap.js#L29-L36'>
+      <span>src/adapters/filterMap.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator that both filters and maps. When the mapped value is null
+or undefined, it is skipped, otherwise it will be yielded.</p>
+
+
+  <div class='pre p1 fill-light mt0'>filterMap(iter: Iterable, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be filtered and mapped.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the iterable
+and returns a new value. If it returns null or undefined, it will move to the
+next value, and if it returns any other value, the returned value is yielded.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields the filtered and mapped values.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+<span class="hljs-keyword">const</span> squareOdd = <span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> {
+  <span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+  <span class="hljs-keyword">return</span> x * x;
+};
+
+<span class="hljs-keyword">const</span> iter = filterMap(a, squareOdd);
+
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 9, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 25, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='flatmap'>
+      flatMap
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/flatMap.js#L46-L50'>
+      <span>src/adapters/flatMap.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which works like map, but flattens nested structures.
+The map function has to return an iterable instead of just a value.
+Consequently all values of the returned iterables are yielded.</p>
+
+
+  <div class='pre p1 fill-light mt0'>flatMap(iterable: Iterable, mapFunc: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>, iter: any): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iterable</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be mapped and flattened.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapFunc</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that returns an iterable for each value.
+All the values of the returned iterables are yielded.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields all values of the mapped
+iterables.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">valNtimes</span>(<span class="hljs-params">val, n</span>) </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+    <span class="hljs-keyword">yield</span> val;
+  }
+}
+<span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> iter = flatMap(a, x =&gt; valNtimes(x, x));
+
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 3, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 3, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 3, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> strings = [<span class="hljs-string">'abc'</span>, <span class="hljs-string">'xyz'</span>];
+
+<span class="hljs-comment">// Strings are also iterable and therefore valid return values</span>
+<span class="hljs-keyword">const</span> iter = flatMap(strings, s =&gt; s);
+
+iter.next(); <span class="hljs-comment">// { value: 'a', done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 'b', done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 'c', done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 'x', done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 'y', done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 'z', done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fuse'>
+      fuse
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/fuse.js#L41-L48'>
+      <span>src/adapters/fuse.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which ends after the first null or undefined value is
+encountered. An iterator could potentially yield null or undefined before
+being done and continue yielding more values afterwards.</p>
+
+
+  <div class='pre p1 fill-light mt0'>fuse(iter: Iterable): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be fused.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        A fused iterator.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Yields even numbers or null</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">alternate</span>(<span class="hljs-params"></span>) </span>{
+ <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+ <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+   <span class="hljs-keyword">if</span> (i % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) {
+     <span class="hljs-keyword">yield</span> i;
+   } <span class="hljs-keyword">else</span> {
+     <span class="hljs-keyword">yield</span> <span class="hljs-literal">null</span>;
+   }
+   i += <span class="hljs-number">1</span>;
+ }
+}
+
+<span class="hljs-keyword">const</span> iter = alternate();
+
+iter.next(); <span class="hljs-comment">// { value: 0, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: null, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: null, done: false }</span>
+<span class="hljs-comment">// Would continue indefinitely</span>
+
+<span class="hljs-keyword">const</span> fused = fuse(iter);
+
+fused.next(); <span class="hljs-comment">// { value: 4, done: false }</span>
+<span class="hljs-comment">// Stops after it encounters null or undefined</span>
+fused.next(); <span class="hljs-comment">// { value: undefined, done: true }</span>
+
+<span class="hljs-comment">// This also ends the original iterator</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='inspect'>
+      inspect
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/inspect.js#L37-L42'>
+      <span>src/adapters/inspect.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which calls the given function with each value before
+passing the value on. When chaining a lot of iterables it might be useful to
+check out what's happening with the values. This is intended for debugging
+purposes.</p>
+
+
+  <div class='pre p1 fill-light mt0'>inspect(iter: Iterable, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be inspected.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that is called with each value.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which calls a function before passing the
+value on.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> sum1 = iter(a)
+  .filter(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>)
+  .fold(<span class="hljs-number">0</span>, (sum, i) =&gt; sum + i);
+
+<span class="hljs-comment">// Could be helpful to see what values make it through the chain</span>
+<span class="hljs-comment">// Just add inspect() between the steps</span>
+<span class="hljs-keyword">const</span> sum2 = iter(a)
+  .inspect(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`about to filter: <span class="hljs-subst">${x}</span>`</span>))
+  .filter(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>)
+  .inspect(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`made it through filter: <span class="hljs-subst">${x}</span>`</span>))
+  .fold(<span class="hljs-number">0</span>, (sum, i) =&gt; sum + i);</pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>about to filter: <span class="hljs-number">1</span>
+about to filter: <span class="hljs-number">2</span>
+made it through filter: <span class="hljs-number">2</span>
+about to filter: <span class="hljs-number">4</span>
+made it through filter: <span class="hljs-number">4</span>
+about to filter: <span class="hljs-number">3</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='map'>
+      map
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/map.js#L20-L24'>
+      <span>src/adapters/map.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which transforms each value into a new one.</p>
+
+
+  <div class='pre p1 fill-light mt0'>map(iter: Iterable, mapFunc: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be mapped.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mapFunc</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that transforms each value.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields the transformed values.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> iter = map(a, x =&gt; x * <span class="hljs-number">2</span>);
+
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 4, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 6, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reverse'>
+      reverse
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/reverse.js#L21-L27'>
+      <span>src/adapters/reverse.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which yields the values in reverse order. The given
+iterable needs to be fully consumed before the values can be yielded in
+reverse, hence it will result in an infinite loop if it is called on an
+infinite iterator.</p>
+
+
+  <div class='pre p1 fill-light mt0'>reverse(iter: Iterable): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be reversed.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        A reversed iterator.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> iter = reverse(a);
+
+iter.next(); <span class="hljs-comment">// { value: 3, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: false }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='scan'>
+      scan
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/scan.js#L27-L33'>
+      <span>src/adapters/scan.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which accumulates a value. This is similar to fold or
+reduce, but instead of creating a single value, it yields each step of the
+accumulator, making the last value equivalent to the output of fold or
+reduce.</p>
+
+
+  <div class='pre p1 fill-light mt0'>scan(iter: Iterable, initialValue: Any, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be scanned.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialValue</span> <code class='quiet'>(Any)</code>
+	    The initial value of the accumulator.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives two arguments, the
+accumulator and the current value, and returns the new accumulated value,
+which is also yielded.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields each step of the accumulator.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> iter = scan(a, <span class="hljs-number">1</span>, (acc, x) =&gt; acc * x);
+
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 6, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: false }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='skip'>
+      skip
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/skip.js#L20-L28'>
+      <span>src/adapters/skip.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator that skips the first n values.</p>
+
+
+  <div class='pre p1 fill-light mt0'>skip(iter: Iterable, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be skipped ahead.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The number of values to be skipped.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields every value starting after
+the first n values.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+<span class="hljs-keyword">const</span> iter = skip(a, <span class="hljs-number">2</span>);
+
+iter.next(); <span class="hljs-comment">// { value: 3, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 4, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: false }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='skipwhile'>
+      skipWhile
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/skipWhile.js#L25-L33'>
+      <span>src/adapters/skipWhile.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which skips values until the predicate becomes false.</p>
+
+
+  <div class='pre p1 fill-light mt0'>skipWhile(iter: Iterable, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be skipped ahead.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean. As long as it returns true, the values will
+be ignored, and once it returned false, it stops.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields all values after the predicate
+became false.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>];
+
+<span class="hljs-keyword">const</span> iter = skipWhile(a, x =&gt; x &lt; <span class="hljs-number">10</span>);
+
+iter.next(); <span class="hljs-comment">// { value: 11, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 13, done: false }</span>
+<span class="hljs-comment">// This would be false, but skipWhile already stopped after the first false</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 4, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='take'>
+      take
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/take.js#L36-L44'>
+      <span>src/adapters/take.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which yields the first n values of the iterable.</p>
+
+
+  <div class='pre p1 fill-light mt0'>take(iter: Iterable, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable from which n values are taken.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The number of values to take from the iterable.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields the first n values.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> iter = take(a, <span class="hljs-number">2</span>);
+
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Often used for infinite iterators</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">naturalNumbers</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">yield</span> i;
+    i += <span class="hljs-number">1</span>;
+  }
+}
+
+<span class="hljs-keyword">const</span> iter = take(naturalNumbers(), <span class="hljs-number">3</span>);
+
+iter.next(); <span class="hljs-comment">// { value: 0, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 2, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='takewhile'>
+      takeWhile
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/takeWhile.js#L24-L31'>
+      <span>src/adapters/takeWhile.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which yields values while the predicate is true.</p>
+
+
+  <div class='pre p1 fill-light mt0'>takeWhile(iter: Iterable, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable from which values are taken.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean. As long as it returns true, the values will
+be yielded, and once it returned false, it stops.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields values while the predicate is
+true.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>];
+
+<span class="hljs-keyword">const</span> iter = takeWhile(a, x =&gt; x &lt; <span class="hljs-number">10</span>);
+
+iter.next(); <span class="hljs-comment">// { value: 1, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 3, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: 6, done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span>
+<span class="hljs-comment">// There are more values below 10 but takeWhile stops after the first false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='zip'>
+      zip
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/adapters/zip.js#L44-L55'>
+      <span>src/adapters/zip.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an iterator which yields a pair of values that correspond to a value
+from the first and the second iterable, and stops when one of the two
+iterables is done.</p>
+
+
+  <div class='pre p1 fill-light mt0'>zip(iterable1: Iterable, iterable2: Iterable): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iterable1</span> <code class='quiet'>(Iterable)</code>
+	    An iterable which provides the first value in the
+pair of values.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iterable2</span> <code class='quiet'>(Iterable)</code>
+	    An iterable which provides the second value in
+the pair of values.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator which yields a pair of values from the two
+iterables.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">const</span> a2 = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">const</span> iter = zip(a1, a2);
+
+iter.next(); <span class="hljs-comment">// { value: [1, 4], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: [2, 5], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: [3, 6], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// This can be used to zip an infinite iterator to a finite one</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">naturalNumbers</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">yield</span> i;
+    i += <span class="hljs-number">1</span>;
+  }
+}
+<span class="hljs-keyword">const</span> a = [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>];
+
+<span class="hljs-keyword">const</span> iter = zip(naturalNumbers(), a);
+
+iter.next(); <span class="hljs-comment">// { value: [0, 'a'], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: [1, 'b'], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: [2, 'c'], done: false }</span>
+iter.next(); <span class="hljs-comment">// { value: undefined, done: true }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Consumers' class='mt0'>
+    Consumers
+  </h2>
+
+  
+    <p>A consumer takes an iterator and consumes it to produce a value.
+Infinite operators result in an infinite loop, unless the function
+short-circuits.</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='all'>
+      all
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/all.js#L22-L29'>
+      <span>src/consumers/all.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Tests if every value of the iterable satisfies the predicate. When all values
+satisfy the predicate it returns true, otherwise false. Once the predicate
+returns false for any value, the result will be false no matter what else
+happens and therefore it stops processing additional values
+(short-circuiting).
+An empty iterable returns true.</p>
+
+
+  <div class='pre p1 fill-light mt0'>all(iter: Iterable, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be tested against the predicate.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Whether all values satisfy the predicate.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+all(a, x =&gt; x &gt; <span class="hljs-number">0</span>); <span class="hljs-comment">// true</span>
+all(a, x =&gt; x &lt; <span class="hljs-number">2</span>); <span class="hljs-comment">// false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='any'>
+      any
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/any.js#L22-L29'>
+      <span>src/consumers/any.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Tests if any value of the iterable satisfies the predicate. When any value
+satisfies the predicate it returns true, otherwise false. Once the predicate
+returns true for any value, the result will be true no matter what else
+happens and therefore it stops processing additional values
+(short-circuiting).
+An empty iterable returns false.</p>
+
+
+  <div class='pre p1 fill-light mt0'>any(iter: Iterable, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be testes against the predicate.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Whether any value satisfies the predicate.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+any(a, x =&gt; x &gt; <span class="hljs-number">0</span>); <span class="hljs-comment">// true</span>
+any(a, x =&gt; x &gt; <span class="hljs-number">5</span>); <span class="hljs-comment">// false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='collect'>
+      collect
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/collect.js#L35-L37'>
+      <span>src/consumers/collect.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Transforms the iterable into a collection. By default an array is constructed
+unless a transformation function is supplied.</p>
+
+
+  <div class='pre p1 fill-light mt0'>collect(iter: Iterable, fromIter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): Any</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be transformed into a collection.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fromIter</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?
+            = <code>Array.from</code>)</code>
+	    A function that receives the
+iterable and returns a collection. When no function is given, it uses
+Array.from to create an Array.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Any</code>:
+        A collection constructed from the values of the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">helloWorld</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">yield</span> <span class="hljs-string">'hello'</span>;
+  <span class="hljs-keyword">yield</span> <span class="hljs-string">' '</span>;
+  <span class="hljs-keyword">yield</span> <span class="hljs-string">'world'</span>;
+}
+
+collect(helloWorld()); <span class="hljs-comment">// ['hello', ' ', 'world']</span>
+
+<span class="hljs-comment">// Custom function to create a collection out of an iterable</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">concatIter</span>(<span class="hljs-params">iter</span>) </span>{
+  <span class="hljs-keyword">let</span> str = <span class="hljs-string">''</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> val <span class="hljs-keyword">of</span> iter) {
+    str += val;
+  }
+  <span class="hljs-keyword">return</span> str;
+}
+<span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+collect(helloWorld(), concatIter); <span class="hljs-comment">// 'hello world'</span>
+collect(a, concatIter); <span class="hljs-comment">// '1234'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='count'>
+      count
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/count.js#L15-L22'>
+      <span>src/consumers/count.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Consumes an iterable, counting the number of iterations and returning it.
+As the iterable needs to be fully consumed, it will result in an infinite
+loop if is is called on an infinite iterator.</p>
+
+
+  <div class='pre p1 fill-light mt0'>count(iter: Iterable): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be counted.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        The number of iterations.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+count(a); <span class="hljs-comment">// 5</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='find'>
+      find
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/find.js#L22-L28'>
+      <span>src/consumers/find.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Searches for a value in the iterable that satisfies the predicate. If any of
+the values satisfies the predicate, the value will be returned, otherwise it
+returns undefined.</p>
+
+
+  <div class='pre p1 fill-light mt0'>find(iter: Iterable, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): (Any | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to search a value in.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean. When it returns true for a value, the value
+is returned and all further values are ignored.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(Any | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</code>:
+        The first value which satisfied the predicate or
+undefined if no value satisfied it.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+find(a, x =&gt; x === <span class="hljs-number">4</span>); <span class="hljs-comment">// 4</span>
+find(a, x =&gt; x &gt; <span class="hljs-number">4</span>); <span class="hljs-comment">// 5</span>
+find(a, x =&gt; x &gt; <span class="hljs-number">10</span>); <span class="hljs-comment">// undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fold'>
+      fold
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/fold.js#L21-L27'>
+      <span>src/consumers/fold.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Applies a function to each value, producing a single, final value. This is
+similar to reduce, except that an initial value needs to be supplied.</p>
+
+
+  <div class='pre p1 fill-light mt0'>fold(iter: Iterable, initialValue: Any, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Any</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be consumed to create a final value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialValue</span> <code class='quiet'>(Any)</code>
+	    The initial value of the accumulator.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives two arguments, the
+accumulator and the current iterable value, and returns the new accumulated
+value.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Any</code>:
+        The final value of the accumulator.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">const</span> sum = fold(a, <span class="hljs-number">0</span>, (acc, x) =&gt; acc + x); <span class="hljs-comment">// 6</span>
+<span class="hljs-keyword">const</span> sumOffset = fold(a, <span class="hljs-number">10</span>, (acc, x) =&gt; acc + x); <span class="hljs-comment">// 16</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='foreach'>
+      forEach
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/forEach.js#L22-L26'>
+      <span>src/consumers/forEach.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Applies a function to each value of the iterable and consumes it. This has
+the same effect as simply using a for-of loop, which should be preferred over
+this.</p>
+
+
+  <div class='pre p1 fill-light mt0'>forEach(iter: Iterable, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be consumed.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that is called with each value.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+forEach(a, <span class="hljs-built_in">console</span>.log);</pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='last'>
+      last
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/last.js#L14-L20'>
+      <span>src/consumers/last.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Consumes an iterable and returns the last value.</p>
+
+
+  <div class='pre p1 fill-light mt0'>last(iter: Iterable): Any</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be consumed.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Any</code>:
+        The last value of the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+last(a); <span class="hljs-comment">// 5</span>
+last([]); <span class="hljs-comment">// undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='max'>
+      max
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/max.js#L15-L28'>
+      <span>src/consumers/max.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns the maximum value of an iterable. If two values are equally maximum,
+the last value is returned.</p>
+
+
+  <div class='pre p1 fill-light mt0'>max(iter: Iterable): Any</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to find the maximum value.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Any</code>:
+        The maximum value of the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+max(a); <span class="hljs-comment">// 3</span>
+max([]); <span class="hljs-comment">// undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='min'>
+      min
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/min.js#L15-L28'>
+      <span>src/consumers/min.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns the minimum value of an iterable. If two values are equally minimum,
+the first value is returned.</p>
+
+
+  <div class='pre p1 fill-light mt0'>min(iter: Iterable): Any</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to find the minimum value.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Any</code>:
+        The minimum value of the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+min(a); <span class="hljs-comment">// 1</span>
+min([]); <span class="hljs-comment">// undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nth'>
+      nth
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/nth.js#L20-L27'>
+      <span>src/consumers/nth.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns the nth value of an iterable. Like most indexing operations, The
+count starts from zero (i.e. nth(iter, 0) returns the first value). If n is
+greater than or equal the number of values in the iterable, it returns
+undefined.</p>
+
+
+  <div class='pre p1 fill-light mt0'>nth(iter: Iterable, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): (Any | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to take the nth value from.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The index of the value.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(Any | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</code>:
+        The nth value or undefined if n is greater than or
+equal to the number of values in the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+nth(a, <span class="hljs-number">2</span>); <span class="hljs-comment">// 2</span>
+nth(a, <span class="hljs-number">5</span>); <span class="hljs-comment">// undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='partition'>
+      partition
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/partition.js#L23-L34'>
+      <span>src/consumers/partition.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates two arrays, where the first array contains all values for which the
+predicate is true and the second contains all values for which it is false.</p>
+
+
+  <div class='pre p1 fill-light mt0'>partition(iter: Iterable, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>]</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be partitioned.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean. If it returns true, the value goes into the
+first array and if it returns false, the value goes into the second array.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>]</code>:
+        An array containing two arrays where the first one
+contains values for which the predicate is true and the second contains all
+values for which it is false.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+<span class="hljs-keyword">const</span> isEven = <span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">const</span> [even, odd] = partition(a, isEven);
+even; <span class="hljs-comment">// [2, 4]</span>
+odd;  <span class="hljs-comment">// [1, 3, 5]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='position'>
+      position
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/position.js#L21-L30'>
+      <span>src/consumers/position.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Searches for a value in the iterable that satisfies the predicate and returns
+its index. If no value satisfies the predicate, -1 is returned.</p>
+
+
+  <div class='pre p1 fill-light mt0'>position(iter: Iterable, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to search a value in.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives the values of the
+iterable and returns a boolean. When it returns true for a value, its index
+is returned and all further values are ignored.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        The index of the first value which satisfied the
+predicate or -1 if no value satisfied it.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+position(a, x =&gt; x === <span class="hljs-number">4</span>); <span class="hljs-comment">// 3</span>
+position(a, x =&gt; x &gt; <span class="hljs-number">4</span>); <span class="hljs-comment">// 4</span>
+position(a, x =&gt; x &gt; <span class="hljs-number">10</span>); <span class="hljs-comment">// -1</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='product'>
+      product
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/product.js#L13-L19'>
+      <span>src/consumers/product.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Multiplies all values of the iterable together.</p>
+
+
+  <div class='pre p1 fill-light mt0'>product(iter: Iterable): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable whose values are multiplied.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        The result of multiplying all values of the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+product(a); <span class="hljs-comment">// 24</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reduce'>
+      reduce
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/reduce.js#L32-L46'>
+      <span>src/consumers/reduce.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Applies a function to each value, producing a single, final value. This
+similar to fold, but uses the first value of the iterable as initial value if
+no initial value is given and the order of the parameters is swapped to mimic
+Array.prototype.reduce.
+Note that the initial value is not run through the function but taken as is.</p>
+
+
+  <div class='pre p1 fill-light mt0'>reduce(iter: Iterable, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>, initialValue: Any?): (Any | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable to be consumed to create a final value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that receives two arguments, the
+accumulator and the current iterable value, and returns the new accumulated
+value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialValue</span> <code class='quiet'>(Any?)</code>
+	    The initial value of the
+accumulator, when it is not supplied, the first value of the iterable is
+taken as the initial value instead.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(Any | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)</code>:
+        The final value of the accumulator or undefined when
+no value is available.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>];
+
+reduce(a, (acc, x) =&gt; acc + x); <span class="hljs-comment">// 12</span>
+reduce(a, (acc, x) =&gt; acc + x, <span class="hljs-number">10</span>); <span class="hljs-comment">// 22</span>
+
+<span class="hljs-comment">// If no initial value is provided, the first value is not built with the</span>
+<span class="hljs-comment">// given function, but simply given as the accumulator to the first call.</span>
+reduce(a, (acc, x) =&gt; acc + x * <span class="hljs-number">3</span>) <span class="hljs-comment">// 32</span>
+reduce(a, (acc, x) =&gt; acc + x * <span class="hljs-number">3</span>, <span class="hljs-number">0</span>) <span class="hljs-comment">// 36</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sum'>
+      sum
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/sum.js#L13-L19'>
+      <span>src/consumers/sum.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Sums all values of the iterable.</p>
+
+
+  <div class='pre p1 fill-light mt0'>sum(iter: Iterable): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable whose values are added together.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        The sum of all values of the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+sum(a); <span class="hljs-comment">// 10</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='unzip'>
+      unzip
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/consumers/unzip.js#L17-L25'>
+      <span>src/consumers/unzip.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Converts an iterable of pairs into two arrays, where each contains the values
+of the respective position in the pair.</p>
+
+
+  <div class='pre p1 fill-light mt0'>unzip(iter: Iterable): [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>]</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterable)</code>
+	    An iterable of pairs to be unzipped.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>]</code>:
+        An array containing two arrays where each contains
+the values of the respective position in the pair of the iterable.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [[<span class="hljs-number">0</span>, <span class="hljs-string">'a'</span>], [<span class="hljs-number">1</span>, <span class="hljs-string">'b'</span>]];
+
+<span class="hljs-keyword">const</span> [left, right] = unzip(a);
+left;  <span class="hljs-comment">// [0, 1]</span>
+right; <span class="hljs-comment">// ['a', 'b']</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Extension' class='mt0'>
+    Extension
+  </h2>
+
+  
+    <p>Directly create an extended iterator.</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='extenditerator'>
+      extendIterator
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/index.js#L56-L58'>
+      <span>src/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Adds methods that call the respective functions on the iterator which can be
+chained as long as the functions return another iterator.</p>
+
+
+  <div class='pre p1 fill-light mt0'>extendIterator(iter: Iterator): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iter</span> <code class='quiet'>(Iterator)</code>
+	    An iterator that gets extended.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        The extended iterator.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iterfromiterable'>
+      iterFromIterable
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/index.js#L70-L72'>
+      <span>src/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Turns an iterable object into an iterator and adds methods to easily operate
+on the values.</p>
+
+
+  <div class='pre p1 fill-light mt0'>iterFromIterable(iterable: Iterable): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iterable</span> <code class='quiet'>(Iterable)</code>
+	    An iterable object that can be turned into an
+iterator.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator with additional methods to operate on its
+values.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iterfromgenerator'>
+      iterFromGenerator
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/index.js#L83-L85'>
+      <span>src/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Turns a generator function into an iterator and adds methods to easily
+operate on the values.</p>
+
+
+  <div class='pre p1 fill-light mt0'>iterFromGenerator(generator: Generator): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>generator</span> <code class='quiet'>(Generator)</code>
+	    A generator function that return an iterator.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator with additional methods to operate on its
+values.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iterfromiterator'>
+      iterFromIterator
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/index.js#L98-L105'>
+      <span>src/index.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Turns an iterator object into an iterable iterator and adds methods to easily
+operate on the values. Usually an iterator is iterable as well, but it is
+not a requirement.</p>
+
+
+  <div class='pre p1 fill-light mt0'>iterFromIterator(iterator: Iterator): Iterator</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iterator</span> <code class='quiet'>(Iterator)</code>
+	    An iterator object to be turned into an iterable
+iterator.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Iterator</code>:
+        An iterator with additional methods to operate on its
+values.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Utils' class='mt0'>
+    Utils
+  </h2>
+
+  
+    <p>Utility functions to determine the potential iterator types.</p>
+<p>Required to be imported from lib/utils.</p>
+<pre class='hljs'><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> utils <span class="hljs-keyword">from</span> <span class="hljs-string">'iterfn/lib/utils'</span>;</pre>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isgeneratorfunction'>
+      isGeneratorFunction
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/utils.js#L10-L12'>
+      <span>src/utils.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Checks whether the given object is a generator function.</p>
+
+
+  <div class='pre p1 fill-light mt0'>isGeneratorFunction(obj: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    An object to be checked.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Whether the object is a generator function.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isiterable'>
+      isIterable
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/utils.js#L21-L23'>
+      <span>src/utils.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Checks whether the given object is iterable.</p>
+
+
+  <div class='pre p1 fill-light mt0'>isIterable(obj: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    An object to be checked.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Whether the object is iterable.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isiterator'>
+      isIterator
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/jungomi/iterfn/blob/1b65936e86cac9d65c3c49982fce15dbcaf592ee/src/utils.js#L32-L34'>
+      <span>src/utils.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Checks whether the given object is an iterator.</p>
+
+
+  <div class='pre p1 fill-light mt0'>isIterator(obj: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    An object to be checked.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Whether the object is an iterator.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
