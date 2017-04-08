@@ -1,6 +1,6 @@
 {
   "name": "iterfn",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Functions to work with iterators and iterables",
   "main": "lib/index.js",
   "browser": "dist/iterfn.min.js",
