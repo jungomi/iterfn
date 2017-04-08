@@ -7,12 +7,12 @@
   "module": "src/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "build": "BABEL_ENV=commonjs babel src --out-dir lib",
-    "build:browser": "BABEL_ENV=browser NODE_ENV=production webpack --progress",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:browser": "cross-env BABEL_ENV=browser NODE_ENV=production webpack --progress",
     "docs": "documentation build -f html -o docs src/index.js --config documentation.yml --github --name $npm_package_name --project-version $npm_package_version",
     "fix": "eslint . --fix",
     "lint": "eslint .",
-    "test": "BABEL_ENV=commonjs ava --verbose",
+    "test": "cross-env BABEL_ENV=commonjs ava --verbose",
     "clean": "rimraf lib dist docs",
     "prepublish": "yarn run clean && yarn run build && yarn run build:browser"
   },
@@ -46,6 +46,7 @@
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.1.11",
     "babili-webpack-plugin": "^0.0.10",
+    "cross-env": "^4.0.0",
     "documentation": "^4.0.0-beta.18",
     "eslint": "^3.16.1",
     "eslint-plugin-prettier": "^2.0.1",
