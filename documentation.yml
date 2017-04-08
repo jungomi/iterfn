@@ -36,6 +36,7 @@ toc:
   - find
   - fold
   - forEach
+  - join
   - last
   - max
   - min
