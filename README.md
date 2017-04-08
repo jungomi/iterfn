@@ -1,6 +1,7 @@
 # iterfn
 
-[![Build Status][travis-img]][travis]
+[![Build Status][travis-badge]][travis]
+[![npm][npm-badge]][npm-link]
 
 [Documentation][docs]
 
@@ -339,6 +340,8 @@ const longSpread = [
 [es-iter]: http://exploringjs.com/es6/ch_iteration.html
 [exploringjs]:  http://exploringjs.com/es6.html
 [iter-trait]: https://doc.rust-lang.org/std/iter/trait.Iterator.html
+[npm-badge]: https://img.shields.io/npm/v/iterfn.svg?style=flat-square
+[npm-link]: https://www.npmjs.com/package/iterfn
 [set]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 [travis]:  https://travis-ci.org/jungomi/iterfn
-[travis-img]: https://travis-ci.org/jungomi/iterfn.svg?branch=master
+[travis-badge]: https://img.shields.io/travis/jungomi/iterfn/master.svg?style=flat-square
