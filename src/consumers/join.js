@@ -3,7 +3,7 @@
  * separator. This will automatically convert the values to a string.
  * The default separator is ','.
  *
- * @param {Iterable} iter An iterable to be counted.
+ * @param {Iterable} iter An iterable whose values are joined.
  *
  * @param {string} [separator = ','] The separator used between the values.
  *
