@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "test": "BABEL_ENV=commonjs ava --verbose",
     "clean": "rimraf lib dist docs",
-    "prepublish": "npm run clean && npm run build && npm run build:browser"
+    "prepublish": "yarn run clean && yarn run build && yarn run build:browser"
   },
   "author": "Michael Jungo <michaeljungo92@gmail.com>",
   "license": "MIT",
